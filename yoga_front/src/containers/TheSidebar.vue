@@ -10,76 +10,16 @@
             <hr>
             <div class="sidebar__item">
                 <span class="sidebar__icon">
-                    <img src="@/assets/img/icons/test.png" alt="">
-                </span>
-                <b-link class="sidebar__link" :to="{name: 'tasks'}">Тесты</b-link>
-            </div>
-            <div class="sidebar__item">
-                <span class="sidebar__icon">
-                    <img src="@/assets/img/icons/specialization.png" alt="">
-                </span>
-                <b-link class="sidebar__link" :to="{name: 'sections'}">Образование</b-link>
-            </div>
-            <div class="sidebar__item">
-                <span class="sidebar__icon">
-                    <img src="@/assets/img/icons/sector.png" alt="">
-                </span>
-                <b-link class="sidebar__link" :to="{name: 'economic-sectors'}">Сектора экономики</b-link>
-            </div>
-            <div class="sidebar__item">
-                <span class="sidebar__icon">
-                    <img src="@/assets/img/icons/sector.png" alt="">
-                </span>
-                <b-link class="sidebar__link" :to="{name: 'profession-list'}">Профессии</b-link>
-            </div>
-            <div class="sidebar__item">
-                <span class="sidebar__icon">
-                    <img src="@/assets/img/icons/scales.png" alt="">
-                </span>
-                <b-link class="sidebar__link" :to="{name: 'scales'}">Шкалы</b-link>
-            </div>
-            <div class="sidebar__item">
-                <span class="sidebar__icon">
                     <img src="@/assets/img/icons/gear.png" alt="">
                 </span>
-                <b-link class="sidebar__link" :to="{name: 'universities'}">ВУЗ и ССУЗ</b-link>
-            </div>
-            <div class="sidebar__item">
-                <span class="sidebar__icon">
-                    <img src="@/assets/img/icons/gear.png" alt="">
-                </span>
-                <b-link class="sidebar__link" :to="{name: 'regions'}">Регионы</b-link>
+                <b-link class="sidebar__link" :to="{name: 'workouts'}">Тренировки</b-link>
             </div>
             <hr>
-            <div class="sidebar__item">
-                <span class="sidebar__icon">
-                    <img src="@/assets/img/icons/organization.png" alt="">
-                </span>
-                <b-link class="sidebar__link" :to="{name: 'organisations'}">Организации</b-link>
-            </div>
-            <div class="sidebar__item">
-                <span class="sidebar__icon">
-                    <img src="@/assets/img/icons/admin.png" alt="">
-                </span>
-                <b-link class="sidebar__link" :to="{name: 'admins'}">Администраторы</b-link>
-            </div>
-            <div class="sidebar__item">
-                <span class="sidebar__icon">
-                    <img src="@/assets/img/icons/moder.png" alt="">
-                </span>
-                <b-link class="sidebar__link" :to="{name: 'moderators'}">Модераторы</b-link>
-            </div>
             <div class="sidebar__item">
                 <span class="sidebar__icon">
                     <img src="@/assets/img/icons/tested.png" alt="">
                 </span>
                 <b-link class="sidebar__link" :to="{name: 'students'}">Пользователи</b-link>
-            </div>
-            <div class="sidebar__item">
-                <span class="sidebar__icon">
-                    <img src="@/assets/img/icons/gear.png" alt="">
-                </span>
-                <b-link class="sidebar__link" :to="{name: 'groups'}">Группы прав</b-link>
             </div>
             <hr>
             <div class="sidebar__item">

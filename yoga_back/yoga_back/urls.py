@@ -14,19 +14,22 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
-from config import settings
+from yoga_back import settings
+from .api_view import *
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('api/', include('rest_framework.urls')),
+    path('api/workout/', include('workout.urls')),
+    path('api/user/', include('user.urls')),
+    path('apidoc/', apidoc, name='apidoc')
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += i18n_patterns(
-    path('admin/', admin.site.urls),
-    path('api/', include('rest_framework.urls')),
-    path('api/workout/', include('workout.urls')),
-    path('api/user/', include('user.urls')),
+    
 )

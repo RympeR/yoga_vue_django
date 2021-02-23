@@ -20,17 +20,6 @@
         </div>
 
         <div class="form__item">
-            <span class="form__label">Email</span>
-            <div class="form__control">
-                <b-form-input class="short"
-                              type="email"
-                              required
-                              v-model="user.email"
-                />
-            </div>
-        </div>
-
-        <div class="form__item">
             <span class="form__label">Аватар</span>
             <div class="form__control">
                 <template v-if="image">
@@ -54,16 +43,6 @@
                         plain
                     />
                 </template>
-            </div>
-        </div>
-
-        <div class="form__item">
-            <span class="form__label">Пол</span>
-            <div class="form__control">
-                <b-form-select class="short"
-                    v-model="user.sex"
-                    :options="toSelectArray(static_data.sex, 'Выберите пол')"
-                />
             </div>
         </div>
 

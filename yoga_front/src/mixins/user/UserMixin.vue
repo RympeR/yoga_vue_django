@@ -9,19 +9,8 @@ export default {
             user: {
                 id: null,
                 image: null,
-                email: null,
                 last_name: null,
-                first_name: null,
-                sex: null,
-                organisation: {
-                    organisation: {
-                        id: null,
-                        name: null,
-                        slug: null,
-                        active_main_page: null,
-                    },
-                    is_admin: null
-                }
+                first_name: null
             },
         }
     },
@@ -31,11 +20,10 @@ export default {
             this.$store.dispatch('token')
                 .then((token) => {
                     this.$axios
-                        .get(process.env.VUE_APP_HOST + '/api/user/', {
+                        .get(process.env.VUE_APP_HOST + '/api/user/profile/', {
                             headers: {
                                 Authorization: token
                             },
-                            params: this.userSearch
                         })
                         .then(function (response) {
                             console.log(response);
@@ -55,7 +43,7 @@ export default {
             this.$store.dispatch('token')
                 .then((token) => {
                     this.$axios
-                        .get(process.env.VUE_APP_HOST + '/api/user/' + id + '/', {
+                        .get(process.env.VUE_APP_HOST + '/api/user/profile/' + id + '/', {
                             headers: {
                                 Authorization: token
                             },
@@ -77,7 +65,7 @@ export default {
                 })
         },
         deleteUser(id) {
-            if (this.deleteRequest('/api/user/delete/', id))
+            if (this.deleteRequest('/api/user/delete-profile/' + id + '/'))
                 this.users = this.users.filter(element => element.id !== id);
         },
         saveUser(obj, id = null) {
@@ -87,9 +75,6 @@ export default {
 
             if (obj.image === [])
                 obj.image = null;
-
-            if (obj.organisation)
-                obj.organisation = obj.organisation.organisation.id;
 
             let formData = new FormData();
             Object.keys(obj).map(function(key) {
@@ -102,7 +87,7 @@ export default {
                     .then((token) => {
                         this.$axios
                             .put(
-                                process.env.VUE_APP_HOST + '/api/user/update/' + id + '/',
+                                process.env.VUE_APP_HOST + '/api/user/update-profile/' + id + '/',
                                 formData,
                                 {
                                     headers: {
@@ -129,7 +114,7 @@ export default {
                     .then((token) => {
                         this.$axios
                             .post(
-                                process.env.VUE_APP_HOST + '/api/user/create/',
+                                process.env.VUE_APP_HOST + '/api/user/create-profile/',
                                 formData,
                                 {
                                     headers: {
