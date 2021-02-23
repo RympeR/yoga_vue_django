@@ -26,7 +26,9 @@ SECRET_KEY = 'g$sm^y_xqe7^1pt!nu5*wq$vp5f$!y^&_3l80#p70!inc20a!t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '*'
+]
 
 
 # Application definition
@@ -184,4 +186,9 @@ REDOC_SETTINGS = {
 }
 
 
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = (
+       'http://localhost:8000',
+       'http://localhost:8800',
+
+)
