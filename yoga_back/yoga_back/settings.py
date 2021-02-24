@@ -152,7 +152,7 @@ MODELTRANSLATION_FALLBACK_LANGUAGES = ('ru', 'en')
 STATIC_DIR = os.path.join(BASE_DIR, 'static/')
 STATICFILES_DIRS = [
     STATIC_DIR,
-    os.path.join(BASE_DIR, 'templates/doc') 
+    os.path.join(BASE_DIR, 'templates/doc') ,
     ]
 STATIC_URL = '/static/'
 
@@ -186,9 +186,8 @@ REDOC_SETTINGS = {
 }
 
 
-CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = (
-       'http://localhost:8000',
-       'http://localhost:8800',
-
-)
+CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_WHITELIST = [
+#        'http://localhost:8000',
+#        'http://localhost:8080',
+# ]

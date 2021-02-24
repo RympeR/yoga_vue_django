@@ -12,6 +12,8 @@ import StudentForm from "./views/user/student/StudentForm";
 import WorkoutList from "@/views/info/workout/WorkoutList";
 import WorkoutForm from "@/views/info/workout/WorkoutForm";
 
+import TroubleList from "@/views/info/trouble/TroubleList";
+import TroubleForm from "@/views/info/trouble/TroubleForm";
 
 Vue.use(Router);
 
@@ -98,6 +100,30 @@ export default new Router({
 					path: 'workout/create',
 					name: 'workout-create',
 					component: WorkoutForm,
+					meta: {
+						requiresAuth: true
+					}
+				},
+				{
+					path: 'trouble',
+					name: 'troubles',
+					component: TroubleList,
+					meta: {
+						requiresAuth: true
+					},
+				},
+				{
+					path: 'trouble/update/:id',
+					name: 'trouble-update',
+					component: TroubleForm,
+					meta: {
+						requiresAuth: true
+					}
+				},
+				{
+					path: 'trouble/create',
+					name: 'trouble-create',
+					component: TroubleForm,
 					meta: {
 						requiresAuth: true
 					}

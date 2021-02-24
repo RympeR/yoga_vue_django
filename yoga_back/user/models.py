@@ -4,11 +4,15 @@ from django.contrib.auth.models import AbstractUser, Group
 from django.utils.translation import ugettext_lazy as _
 # Create your models here.
 
+SEX_CHOICES = [
+    ('M', 'M'),
+    ('F', 'F'),
+]
 class User(models.Model):
-    first_name = models.CharField(_('First name'), max_length=255, null=True, blank=True)
-    last_name = models.CharField(_('Last name'), max_length=255, null=True, blank=True)
+    first_name = models.CharField(_('Имя'), max_length=255, null=True, blank=True)
+    last_name = models.CharField(_('Фамилия'), max_length=255, null=True, blank=True)
     image = models.ImageField(verbose_name='Фото профиля')
-
+    sex = models.CharField(_('Пол'), max_length=1, choices=SEX_CHOICES)
     class Meta:
         verbose_name = 'Пользователь'
         verbose_name_plural = 'Пользователи'

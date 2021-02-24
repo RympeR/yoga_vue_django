@@ -8,19 +8,18 @@ export default {
             image: null,
             workout: {
                 id: null,
-                title: null,
                 image: null,
                 video: null,
                 name: null,
-                level: {
-                    id:null,
-                    name:null
-                },
+                level: null,
                 periodicity: null,
                 duration: null,
                 description: null,
                 value: null,
+                sex: null,
+                troubles: null
             },
+            filter: null,
         }
     },
     methods: {
@@ -33,7 +32,6 @@ export default {
                             .get(process.env.VUE_APP_HOST + '/api/workout/get-workout-list/', {
                                 params: this.workoutSearch,
                                 headers: {
-                                    'Access-Control-Allow-Origin': "*",
                                     Authorization: token
                                 }
                             })
@@ -62,7 +60,6 @@ export default {
                             .get(process.env.VUE_APP_HOST + '/api/workout/get-workout/' + id + '/', {
                                 params: this.workoutSearch,
                                 headers: {
-                                    'Access-Control-Allow-Origin': "*",
                                     Authorization: token
                                 }
                             })
@@ -71,6 +68,7 @@ export default {
                                 self.workout = response.data;
                                 self.image = response.data.image;
                                 self.video = response.data.video;
+                                console.log("Workout: "+self.workout.troubles)
                                 resolve(response)
                             })
                             .catch(function (response) {
@@ -85,14 +83,12 @@ export default {
             })
         },
         deleteWorkout(id) {
-            if (this.deleteRequest('/api/workout/delete-workout/' + id + '/'))
+            if (this.deleteRequest('/api/workout/delete-workout/' , id))
                 this.workouts = this.workouts.filter(element => element.id !== id);
         },
         saveWorkout(obj, id = null) {
             const self = this;
-            obj.name = obj.name_ru;
-            obj.text = obj.text_ru;
-            obj.city = obj.city_ru;
+            console.log('Obj ' + obj.image + obj.video);
             if (typeof(obj.image) == 'string')
                 delete obj.image;
             
@@ -116,7 +112,7 @@ export default {
                     .then((token) => {
                         this.$axios
                             .put(
-                                process.env.VUE_APP_HOST + '/api/workout/update-workout/',
+                                process.env.VUE_APP_HOST + '/api/workout/update-workout/' + id + '/',
                                 formData,
                                 {
                                     headers: {
@@ -128,7 +124,7 @@ export default {
                             )
                             .then(function (response) {
                                 self.templateShowSuccess(response);
-                                self.getUniversity(id)
+                                self.getWorkout(id)
                             })
                             .catch(function (response) {
                                 console.log(response);

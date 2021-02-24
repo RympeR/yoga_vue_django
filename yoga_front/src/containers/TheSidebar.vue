@@ -17,6 +17,13 @@
             <hr>
             <div class="sidebar__item">
                 <span class="sidebar__icon">
+                    <img src="@/assets/img/icons/gear.png" alt="">
+                </span>
+                <b-link class="sidebar__link" :to="{name: 'troubles'}">Проблемы</b-link>
+            </div>
+            <hr>
+            <div class="sidebar__item">
+                <span class="sidebar__icon">
                     <img src="@/assets/img/icons/tested.png" alt="">
                 </span>
                 <b-link class="sidebar__link" :to="{name: 'students'}">Пользователи</b-link>

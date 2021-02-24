@@ -1,41 +1,36 @@
 <script>
 export default {
-    name: "CategoryMixin",
-    categorySearch: [],
+    name: "TroubleMixin",
+    troublesSearch: [],
     data () {
         return {
-            categories: [],
-            category: {
+            troubles: [],
+            trouble: {
                 id: null,
-                economic_sector: {
-                    id: null,
-                    image: null,
-                    name: null,
-                    name_ru: null,
-                    name_kk: null,
-                },
                 name: null,
-                name_ru: null,
-                name_kk: null,
+                image: null
             },
+            image: null,
+            filter: null,
         }
     },
     methods: {
-        getCategories() {
+        getTroubles() {
             return new Promise((resolve, reject) => {
                 const self = this;
                 this.$store.dispatch('token')
                     .then((token) => {
                         this.$axios
-                            .get(process.env.VUE_APP_HOST + '/api/profession/category/', {
+                            .get(process.env.VUE_APP_HOST + '/api/workout/get-trouble-list/', {
+                                params: this.troublesSearch,
                                 headers: {
                                     Authorization: token
-                                },
-                                params: this.categorySearch
+                                }
                             })
                             .then(function (response) {
                                 console.log(response);
-                                self.categories = response.data.results
+                                self.troubles = response.data.results
+                                
                                 resolve(response)
                             })
                             .catch(function (response) {
@@ -49,37 +44,48 @@ export default {
                     })
             })
         },
-        getCategory(id) {
+        getTrouble(id) {
             const self = this;
-            this.$store.dispatch('token')
-                .then((token) => {
-                    this.$axios
-                        .get(process.env.VUE_APP_HOST + '/api/profession/category/' + id + '/', {
-                            headers: {
-                                Authorization: token
-                            },
-                            params: this.categorySearch
-                        })
-                        .then(function (response) {
-                            console.log(response);
-                            self.category = response.data;
-                        })
-                        .catch(function (response) {
-                            console.log(response);
-                            self.templateShowError(response);
-                        })
-                })
-                .catch(response => {
-                    console.log(response)
-                })
+            return new Promise((resolve, reject) => {
+                this.$store.dispatch('token')
+                    .then((token) => {
+                        this.$axios
+                            .get(process.env.VUE_APP_HOST + '/api/workout/get-trouble/' + id + '/', {
+                                params: this.troublesSearch,
+                                headers: {
+                                    Authorization: token
+                                }
+                            })
+                            .then(function (response) {
+                                console.log(response);
+                                self.trouble = response.data;
+                                self.image = response.data.image;
+                                self.trouble.image = null;
+                                resolve(response)
+                            })
+                            .catch(function (response) {
+                                console.log(response);
+                                self.templateShowError(response);
+                                reject(response)
+                            })
+                    })
+                    .catch(response => {
+                        console.log(response)
+                    })
+            })
         },
-        deleteCategory(id) {
-            if (this.deleteRequest('/api/profession/category/delete/', id))
-                this.categories = this.categories.filter(element => element.id !== id);
+        deleteTrouble(id) {
+            if (this.deleteRequest('/api/workout/delete-trouble/' , id))
+                this.troubles = this.troubles.filter(element => element.id !== id);
         },
-        saveCategory(obj, id = null) {
+        saveTrouble(obj, id = null) {
             const self = this;
-            obj.name = obj.name_ru;
+            if (typeof(obj.image) == 'string')
+                delete obj.image;
+
+            if (obj.image === [])
+                obj.image = null;
+
             let formData = new FormData();
             Object.keys(obj).map(function(key) {
                 if (obj[key])
@@ -91,19 +97,19 @@ export default {
                     .then((token) => {
                         this.$axios
                             .put(
-                                process.env.VUE_APP_HOST + '/api/profession/category/update/' + id + '/',
+                                process.env.VUE_APP_HOST + '/api/workout/update-trouble/' + id + '/',
                                 formData,
                                 {
                                     headers: {
-                                        Authorization: token,
                                         'Content-Type': 'multipart/form-data',
+                                        Authorization: token
                                     },
         
                                 }
                             )
                             .then(function (response) {
                                 self.templateShowSuccess(response);
-                                self.getCategory(id)
+                                self.getTrouble(id)
                             })
                             .catch(function (response) {
                                 console.log(response);
@@ -118,12 +124,12 @@ export default {
                     .then((token) => {
                         this.$axios
                             .post(
-                                process.env.VUE_APP_HOST + '/api/profession/category/create/',
+                                process.env.VUE_APP_HOST + '/api/workout/create-trouble/',
                                 formData,
                                 {
                                     headers: {
-                                        Authorization: token,
                                         'Content-Type': 'multipart/form-data',
+                                        Authorization: token
                                     },
         
                                 }

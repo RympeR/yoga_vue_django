@@ -45,7 +45,21 @@
                 </template>
             </div>
         </div>
-
+        <div class="form__item">
+            <span class="form__label">Пол</span>
+            <div class="form__control">
+                <div class="row">
+                        <div class="col-6">
+                            <b-form-select
+                                v-model="user.sex"
+                                :options="sex"
+                                value-field="sex"
+                                text-field="sex"
+                            />
+                        </div>
+                    </div>
+            </div>
+        </div>
         <div class="form__item form__item_submit">
             <div class="form__control">
                 <b-button type="submit" variant="primary">Сохранить</b-button>
@@ -63,7 +77,8 @@ export default {
     data () {
         return {
             id: null,
-            alert: false
+            alert: false,
+            sex: ["M", "F"]
         }
     },
     created() {

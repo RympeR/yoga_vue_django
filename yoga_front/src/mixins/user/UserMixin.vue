@@ -10,7 +10,8 @@ export default {
                 id: null,
                 image: null,
                 last_name: null,
-                first_name: null
+                first_name: null,
+                sex: null
             },
         }
     },
@@ -65,11 +66,12 @@ export default {
                 })
         },
         deleteUser(id) {
-            if (this.deleteRequest('/api/user/delete-profile/' + id + '/'))
+            if (this.deleteRequest('/api/user/delete-profile/', id))
                 this.users = this.users.filter(element => element.id !== id);
         },
         saveUser(obj, id = null) {
             const self = this;
+            console.log('Obj ' + obj.image);
             if (typeof(obj.image) == 'string')
                 delete obj.image;
 

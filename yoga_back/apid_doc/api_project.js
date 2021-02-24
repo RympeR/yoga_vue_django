@@ -1,4 +1,4 @@
-{
+define({
   "name": "apidoc-example",
   "version": "0.3.0",
   "description": "apiDoc example project",
@@ -17,8 +17,8 @@
   "apidoc": "0.3.0",
   "generator": {
     "name": "apidoc",
-    "time": "2021-02-22T14:58:08.281Z",
+    "time": "2021-02-24T15:22:49.195Z",
     "url": "https://apidocjs.com",
     "version": "0.26.0"
   }
-}
+});

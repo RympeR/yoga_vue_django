@@ -47,14 +47,14 @@
                     <label>Тренировка:</label>
 
                     <b-form-select
-                        v-model="filter.level"
+                        v-model="filter"
                         :options="workoutLevels"
-                        value-field="id"
+                        value-field="name"
                         text-field="name"
                     />
                 </div>
                 <div class="px-3 py-2">
-                    <b-button type="submit" variant="success">Фильтровать</b-button>
+                    <b-button type="submit" @click="goFilter" variant="success">Фильтровать</b-button>
                     &nbsp;
                     <b-button type="submit" @click="clearFilter" variant="warning">Очистить</b-button>
                     <br>
@@ -77,9 +77,8 @@ export default {
             fields: [
                 { key: 'index', label: '#'},
                 { key: 'id', label: 'ID'},
-                { key: 'title', label: 'Заголовок'},
-                { key: 'image', label: 'Иконка'},
                 { key: 'name', label: 'Название'},
+                { key: 'image', label: 'Иконка'},
                 { key: 'level', label: 'Сложность'},
                 { key: 'duration', label: 'Длительность'},
                 { key: 'actions', label: ''},
@@ -89,9 +88,9 @@ export default {
                 level: null
             },
             workoutLevels:[
-                'Легкий',
+                'Простой',
                 'Средний',
-                'Сложный'
+                'Продвинутый'
             ]
         }
     },

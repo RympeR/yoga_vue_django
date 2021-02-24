@@ -25,7 +25,8 @@ class UserAPI(APIView):
                 "user_id": user.id,
                 "image": image_url,
                 "first_name": user.first_name,
-                "last_name": user.last_name
+                "last_name": user.last_name,
+                "sex": user.sex
             }
         )
 
@@ -40,7 +41,11 @@ class UserAPI(APIView):
         )
 
     def put(self, *args, **kwargs):
-        user = UserSerializer.update(self.request.data)
+        print(self.request.data)
+        data = dict(self.request.data)
+        print(data)
+        data['user_id'] = kwargs['user_id']
+        user = UserSerializer.update(data)
         domain = self.request.get_host()
         path_image = user.image.url
         image_url = 'http://{domain}{path}'.format(domain=domain, path=path_image)
@@ -49,7 +54,8 @@ class UserAPI(APIView):
                 "user_id": user.id,
                 "image": image_url,
                 "first_name": user.first_name,
-                "last_name": user.last_name
+                "last_name": user.last_name,
+                "sex": user.sex
             }
         )
 

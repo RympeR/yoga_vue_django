@@ -15,29 +15,44 @@
 @apiName 2. Workout
 @apiGroup Workout
 
-@api {GET} /api/workout/get_workout/{workout_id}/ 2. Get Workout
+@api {GET} /api/workout/get-workout/{workout_id}/ 2. Get Workout
 
 @apiParam {Number} workout_id Id-Workout 
 
-@apiSuccess {int} id ID
+@apiSuccess {int} workout_id ID
+@apiSuccess {str} name Name
 @apiSuccess {str} video Video
 @apiSuccess {str} duration Duration
-@apiSuccess {str} periodicity Periodicity
+@apiSuccess {int} periodicity Periodicity
 @apiSuccess {str} level Level
 @apiSuccess {str} description Description
 @apiSuccess {str} value Value
+@apiSuccess {str} sex Sex
+@apiSuccess {str} image Image
+@apiSuccess {objects} troubles Troubles
+
 
 @apiSuccessExample Success-Response:
     HTTP/1.1 200 OK
     {
-        "id": 1,
-        "video": "http://127.0.0.1:8000/media/user/YFDNcvTLEhqx.mp4",
-        "duration": "12 min",
-        "periodicity": "1 time a week",
-        "level": "easy",
-        "description": "this is really long desscription",
-        "value": "with this workout you'll be better"
-    }
+    "workout_id": 4,
+    "name": "t",
+    "video": "http://127.0.0.1:8000/media/Kitten_Zoom_Filter_Mishap_VEC0LdZ.mp4",
+    "duration": "t",
+    "periodicity": "4",
+    "level": "Средний",
+    "description": "t",
+    "value": "t",
+    "image": "http://127.0.0.1:8000/media/kotik_LFuK6N5.jpg",
+    "sex": "M",
+    "troubles": [
+        {
+            "id": 3,
+            "name": "котик еще не на коленках",
+            "image": "Без_названия_dtDHOan.jpg"
+        }
+    ]
+}
 @apiuse WorkoutWasNotFoundError
 """
 
@@ -45,7 +60,7 @@
 @apiName 2.1 Workout List
 @apiGroup Workout
 
-@api {GET} /api/workout/get_workout_list/ 2.1 Workout List
+@api {GET} /api/workout/get-workout-list/ 2.1 Workout List
 
 @apiSuccess {int} id ID
 @apiSuccess {str} title Title
@@ -54,32 +69,21 @@
 @apiSuccessExample Success-Response:
     HTTP/1.1 200 OK
     {
-        "page_size": 300,
-        "page": 1,
-        "total_pages": 1,
-        "count": 3,
-        "results": [
-            {
-                "id": 1,
-                "title": "test1",
-                "image": "http://127.0.0.1:8000/media/user/YfewfHfduw.jpg",
-            },
-            {
-                "id": 2,
-                "title": "test2",
-                "image": "http://127.0.0.1:8000/media/user/werweE.jpg",
-            },
-            {
-                "id": 3,
-                "title": "test3",
-                "image": "http://127.0.0.1:8000/media/user/EGWfefWGgegew.jpg",
-            }
-        ],
-        "links": {
-            "next": null,
-            "previous": null
+    "results": [
+        {
+            "id": 4,
+            "name": "t",
+            "video": "http://127.0.0.1:8000/media/Kitten_Zoom_Filter_Mishap_VEC0LdZ.mp4",
+            "duration": "t",
+            "periodicity": "4",
+            "level": "Средний",
+            "image": "http://127.0.0.1:8000/media/kotik_LFuK6N5.jpg",
+            "description": "t",
+            "value": "t",
+            "sex": "M"
         }
-    }
+    ]
+}
 @apiuse WorkoutWasNotFoundError
 """
 
@@ -88,16 +92,18 @@
 @apiName 2.2 Create workout
 @apiGroup Workout
 
-@api {POST} /api/workout/create_workout/ 2.2 Create workout
+@api {POST} /api/workout/create-workout/ 2.2 Create workout
 
-@apiParam {String} title
+@apiParam {String} name
 @apiParam {String} image
 @apiParam {String} video
 @apiParam {String} duration
-@apiParam {String} periodicity
+@apiParam {Number} periodicity
 @apiParam {String} level
 @apiParam {String} description
 @apiParam {String} value
+@apiParam {String} sex
+@apiParam {Object} troubles
 
 @apiSuccess {int} id ID
 @apiSuccessExample Success-Response:
@@ -113,19 +119,32 @@
 @apiName 2.3 Update workout
 @apiGroup Workout
 
-@api {POST} /api/workout/create_workout/ 2.3 Update workout
+@api {POST} /api/workout/update-workout/ 2.3 Update workout
 
-@apiSuccess {int} id ID
-@apiParam {String} title Title
-@apiParam {String} image Image
-@apiParam {String} video Video
-@apiParam {String} duration Duration
-@apiParam {String} periodicity Periodicity
-@apiParam {String} level Workout level
-@apiParam {String} description Description
-@apiParam {String} value Value
+@apiParam {Number} id
+@apiParam {String} name
+@apiParam {String} image
+@apiParam {String} video
+@apiParam {String} duration
+@apiParam {Number} periodicity
+@apiParam {String} level
+@apiParam {String} description
+@apiParam {String} value
+@apiParam {String} sex
+@apiParam {Array} sex
 
-@apiSuccess {int} id ID
+@apiSuccess {int} workout_id ID
+@apiSuccess {str} name Name
+@apiSuccess {str} video Video
+@apiSuccess {str} duration Duration
+@apiSuccess {int} periodicity Periodicity
+@apiSuccess {str} level Level
+@apiSuccess {str} description Description
+@apiSuccess {str} value Value
+@apiSuccess {str} sex Sex
+@apiSuccess {str} image Image
+@apiSuccess {objects} troubles Troubles
+
 @apiSuccessExample Success-Response:
     HTTP/1.1 200 OK
     {
@@ -133,4 +152,195 @@
     }
 
 
+"""
+
+"""
+@apiName 2.4 Get Workout Filtered List
+@apiGroup Workout
+
+@api {GET} /api/workout/get-workout-filtered-list/ 2.4 Get Workout Filtered List
+
+@apiParam {String} sex Sex 
+@apiParam {Number} peridoicity Peridoicity 
+@apiParam {String} level Level 
+@apiParam {Object} troubles Trouble id's array 
+
+@apiSuccess {int} workout_id ID
+@apiSuccess {str} name Name
+@apiSuccess {str} image Image
+
+
+@apiSuccessExample Success-Response:
+    HTTP/1.1 200 OK
+    {
+    "results": [
+        {
+            "id": 4,
+            "name": "t",
+            "image": "http://127.0.0.1:8000/media/kotik_LFuK6N5.jpg"
+        }
+    ]
+}
+}
+@apiuse WorkoutWasNotFoundError
+"""
+
+"""
+@apiName 2.5 Get Workout List
+@apiGroup Workout
+
+@api {GET} /api/workout/get-workout-list/ 2.5 Get Workout List
+
+@apiSuccess {int} workout_id ID
+@apiSuccess {str} name Name
+@apiSuccess {str} image Image
+
+
+@apiSuccessExample Success-Response:
+    HTTP/1.1 200 OK
+    {
+    "results": [
+        {
+            "id": 4,
+            "name": "t",
+            "image": "http://127.0.0.1:8000/media/kotik_LFuK6N5.jpg"
+        }
+    ]
+}
+}
+@apiuse WorkoutWasNotFoundError
+"""
+
+"""
+@apiName 2.6 Delete workout
+@apiGroup Workout
+
+@api {DELETE} /api/workout/delete-workout/{workout_id}/ 2.5 Delete workout
+
+@apiParam {Number} workout_id Workout id 
+
+
+@apiSuccessExample Success-Response:
+    HTTP/1.1 200 OK
+    {
+        "workout_id": 4
+    }
+    
+
+@apiuse WorkoutWasNotFoundError
+"""
+
+
+"""
+@apiName 3 Get trouble
+@apiGroup Troubles
+
+@api {GET} /api/workout/get-trouble/{trouble_id}/ 3 Get trouble
+
+@apiParam {Number} trouble_id Trouble id
+
+@apiSuccessExample Success-Response:
+    HTTP/1.1 200 OK
+    {
+   
+            "id": 2,
+            "name": "котик вернулся на коленки",
+            "image": "http://127.0.0.1:8000/media/kotik_6d69TZ3.jpg"
+    }
+
+    
+
+@apiuse WorkoutWasNotFoundError
+"""
+
+"""
+@apiName 3.2 Get troubles list
+@apiGroup Troubles
+
+@api {GET} /api/workout/get-trouble-list/ 3.2 Get trouble list
+
+
+
+@apiSuccessExample Success-Response:
+    HTTP/1.1 200 OK
+    {
+    "results": [
+        {
+            "id": 2,
+            "name": "котик вернулся на коленки",
+            "image": "http://127.0.0.1:8000/media/kotik_6d69TZ3.jpg"
+        },
+        {
+            "id": 3,
+            "name": "котик еще не на коленках",
+            "image": "http://127.0.0.1:8000/media/ghrweherherh_dtDHOan.jpg"
+        }
+    ]
+}
+    
+
+@apiuse WorkoutWasNotFoundError
+"""
+
+"""
+@apiName 3.3 Create trouble
+@apiGroup Troubles
+
+@api {POST} /api/workout/create-trouble/ 3.3 Create trouble
+
+@apiParam {Number} trouble_id Trouble id
+@apiParam {String} image Trouble image
+@apiParam {String} name Trouble name
+
+
+@apiSuccessExample Success-Response:
+    HTTP/1.1 200 OK
+    {
+        "trouble_id": 4,
+    }
+    
+
+@apiuse WorkoutWasNotFoundError
+"""
+
+"""
+@apiName 3.4 Update trouble
+@apiGroup Troubles
+
+@api {PUT} /api/workout/update-trouble/{trouble_id}/ 3.4 Update trouble
+
+@apiParam {Number} trouble_id Trouble id
+@apiParam {String} image Trouble image
+@apiParam {String} name Trouble name
+
+
+@apiSuccessExample Success-Response:
+    HTTP/1.1 200 OK
+    {
+        "trouble_id": 4,
+        "name": "test",
+        "image": "http://127.0.0.1:8000/media/kotik_LFuK6N5.jpg"
+    }
+    
+
+@apiuse WorkoutWasNotFoundError
+"""
+
+"""
+@apiName 3.5 Delete trouble
+@apiGroup Troubles
+
+@api {DELETE} /api/workout/delete-trouble/{trouble_id}/ 3.5 Delete trouble
+
+@apiParam {Number} trouble_id Trouble id 
+
+
+@apiSuccessExample Success-Response:
+    HTTP/1.1 200 OK
+    {
+        "trouble_id": 4
+    }
+    
+
+@apiuse WorkoutWasNotFoundError
 """
