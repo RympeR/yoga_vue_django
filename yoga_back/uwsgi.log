@@ -1,0 +1,723 @@
+[2021-02-25 11:47:29 +0200] [23835] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 11:47:29 +0200] [23835] [INFO] Listening at: http://127.0.0.1:8000 (23835)
+[2021-02-25 11:47:29 +0200] [23835] [INFO] Using worker: sync
+[2021-02-25 11:47:29 +0200] [23840] [INFO] Booting worker with pid: 23840
+[2021-02-25 11:47:29 +0200] [23840] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'ypga_back'
+[2021-02-25 11:47:29 +0200] [23840] [INFO] Worker exiting (pid: 23840)
+[2021-02-25 11:47:29 +0200] [23835] [INFO] Shutting down: Master
+[2021-02-25 11:47:29 +0200] [23835] [INFO] Reason: Worker failed to boot.
+[2021-02-25 11:47:30 +0200] [23841] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 11:47:30 +0200] [23841] [INFO] Listening at: http://127.0.0.1:8000 (23841)
+[2021-02-25 11:47:30 +0200] [23841] [INFO] Using worker: sync
+[2021-02-25 11:47:30 +0200] [23844] [INFO] Booting worker with pid: 23844
+[2021-02-25 11:47:30 +0200] [23844] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'ypga_back'
+[2021-02-25 11:47:30 +0200] [23844] [INFO] Worker exiting (pid: 23844)
+[2021-02-25 11:47:30 +0200] [23841] [INFO] Shutting down: Master
+[2021-02-25 11:47:30 +0200] [23841] [INFO] Reason: Worker failed to boot.
+[2021-02-25 11:47:32 +0200] [23846] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 11:47:32 +0200] [23846] [INFO] Listening at: http://127.0.0.1:8000 (23846)
+[2021-02-25 11:47:32 +0200] [23846] [INFO] Using worker: sync
+[2021-02-25 11:47:32 +0200] [23849] [INFO] Booting worker with pid: 23849
+[2021-02-25 11:47:32 +0200] [23849] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'ypga_back'
+[2021-02-25 11:47:32 +0200] [23849] [INFO] Worker exiting (pid: 23849)
+[2021-02-25 11:47:32 +0200] [23846] [INFO] Shutting down: Master
+[2021-02-25 11:47:32 +0200] [23846] [INFO] Reason: Worker failed to boot.
+[2021-02-25 11:47:35 +0200] [23851] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 11:47:35 +0200] [23851] [INFO] Listening at: http://127.0.0.1:8000 (23851)
+[2021-02-25 11:47:35 +0200] [23851] [INFO] Using worker: sync
+[2021-02-25 11:47:35 +0200] [23855] [INFO] Booting worker with pid: 23855
+[2021-02-25 11:47:35 +0200] [23855] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'ypga_back'
+[2021-02-25 11:47:35 +0200] [23855] [INFO] Worker exiting (pid: 23855)
+[2021-02-25 11:47:35 +0200] [23856] [INFO] Booting worker with pid: 23856
+[2021-02-25 11:47:35 +0200] [23856] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'ypga_back'
+[2021-02-25 11:47:35 +0200] [23856] [INFO] Worker exiting (pid: 23856)
+[2021-02-25 11:47:35 +0200] [23851] [INFO] Shutting down: Master
+[2021-02-25 11:47:35 +0200] [23851] [INFO] Reason: Worker failed to boot.
+[2021-02-25 11:47:52 +0200] [23867] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 11:47:52 +0200] [23867] [INFO] Listening at: http://127.0.0.1:8000 (23867)
+[2021-02-25 11:47:52 +0200] [23867] [INFO] Using worker: sync
+[2021-02-25 11:47:52 +0200] [23870] [INFO] Booting worker with pid: 23870
+[2021-02-25 11:47:52 +0200] [23870] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'ypga_back'
+[2021-02-25 11:47:52 +0200] [23870] [INFO] Worker exiting (pid: 23870)
+[2021-02-25 11:47:53 +0200] [23867] [INFO] Shutting down: Master
+[2021-02-25 11:47:53 +0200] [23867] [INFO] Reason: Worker failed to boot.
+[2021-02-25 11:47:54 +0200] [23871] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 11:47:54 +0200] [23871] [INFO] Listening at: http://127.0.0.1:8000 (23871)
+[2021-02-25 11:47:54 +0200] [23871] [INFO] Using worker: sync
+[2021-02-25 11:47:54 +0200] [23874] [INFO] Booting worker with pid: 23874
+[2021-02-25 11:47:54 +0200] [23874] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'ypga_back'
+[2021-02-25 11:47:54 +0200] [23874] [INFO] Worker exiting (pid: 23874)
+[2021-02-25 11:47:54 +0200] [23875] [INFO] Booting worker with pid: 23875
+[2021-02-25 11:47:54 +0200] [23875] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'ypga_back'
+[2021-02-25 11:47:54 +0200] [23875] [INFO] Worker exiting (pid: 23875)
+Traceback (most recent call last):
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 202, in run
+    self.manage_workers()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 545, in manage_workers
+    self.spawn_workers()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 617, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yoga/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/base.py", line 228, in run
+    super().run()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 229, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 342, in halt
+    self.stop()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 393, in stop
+    time.sleep(0.1)
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2021-02-25 11:47:56 +0200] [23878] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 11:47:56 +0200] [23878] [INFO] Listening at: http://127.0.0.1:8000 (23878)
+[2021-02-25 11:47:56 +0200] [23878] [INFO] Using worker: sync
+[2021-02-25 11:47:56 +0200] [23881] [INFO] Booting worker with pid: 23881
+[2021-02-25 11:47:56 +0200] [23881] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'ypga_back'
+[2021-02-25 11:47:56 +0200] [23881] [INFO] Worker exiting (pid: 23881)
+[2021-02-25 11:47:56 +0200] [23882] [INFO] Booting worker with pid: 23882
+[2021-02-25 11:47:56 +0200] [23882] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'ypga_back'
+[2021-02-25 11:47:56 +0200] [23882] [INFO] Worker exiting (pid: 23882)
+[2021-02-25 11:47:56 +0200] [23883] [INFO] Booting worker with pid: 23883
+[2021-02-25 11:47:56 +0200] [23883] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'ypga_back'
+[2021-02-25 11:47:56 +0200] [23883] [INFO] Worker exiting (pid: 23883)
+Traceback (most recent call last):
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 202, in run
+    self.manage_workers()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 545, in manage_workers
+    self.spawn_workers()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 617, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yoga/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/base.py", line 228, in run
+    super().run()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 229, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 342, in halt
+    self.stop()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 393, in stop
+    time.sleep(0.1)
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2021-02-25 11:47:59 +0200] [23884] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 11:47:59 +0200] [23884] [INFO] Listening at: http://127.0.0.1:8000 (23884)
+[2021-02-25 11:47:59 +0200] [23884] [INFO] Using worker: sync
+[2021-02-25 11:47:59 +0200] [23887] [INFO] Booting worker with pid: 23887
+[2021-02-25 11:47:59 +0200] [23887] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'ypga_back'
+[2021-02-25 11:47:59 +0200] [23887] [INFO] Worker exiting (pid: 23887)
+[2021-02-25 11:47:59 +0200] [23884] [INFO] Shutting down: Master
+[2021-02-25 11:47:59 +0200] [23884] [INFO] Reason: Worker failed to boot.
+[2021-02-25 11:49:53 +0200] [23930] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 11:49:53 +0200] [23930] [INFO] Listening at: http://127.0.0.1:8000 (23930)
+[2021-02-25 11:49:53 +0200] [23930] [INFO] Using worker: sync
+[2021-02-25 11:49:53 +0200] [23933] [INFO] Booting worker with pid: 23933
+[2021-02-25 11:49:53 +0200] [23933] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'ypga_back'
+[2021-02-25 11:49:53 +0200] [23933] [INFO] Worker exiting (pid: 23933)
+[2021-02-25 11:49:53 +0200] [23930] [INFO] Shutting down: Master
+[2021-02-25 11:49:53 +0200] [23930] [INFO] Reason: Worker failed to boot.
+[2021-02-25 11:49:54 +0200] [23934] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 11:49:54 +0200] [23934] [INFO] Listening at: http://127.0.0.1:8000 (23934)
+[2021-02-25 11:49:54 +0200] [23934] [INFO] Using worker: sync
+[2021-02-25 11:49:54 +0200] [23937] [INFO] Booting worker with pid: 23937
+[2021-02-25 11:49:54 +0200] [23937] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'ypga_back'
+[2021-02-25 11:49:54 +0200] [23937] [INFO] Worker exiting (pid: 23937)
+[2021-02-25 11:49:54 +0200] [23934] [INFO] Shutting down: Master
+[2021-02-25 11:49:54 +0200] [23934] [INFO] Reason: Worker failed to boot.
+[2021-02-25 11:49:56 +0200] [23938] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 11:49:56 +0200] [23938] [INFO] Listening at: http://127.0.0.1:8000 (23938)
+[2021-02-25 11:49:56 +0200] [23938] [INFO] Using worker: sync
+[2021-02-25 11:49:56 +0200] [23941] [INFO] Booting worker with pid: 23941
+[2021-02-25 11:49:56 +0200] [23941] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'ypga_back'
+[2021-02-25 11:49:56 +0200] [23941] [INFO] Worker exiting (pid: 23941)
+[2021-02-25 11:49:56 +0200] [23938] [INFO] Shutting down: Master
+[2021-02-25 11:49:56 +0200] [23938] [INFO] Reason: Worker failed to boot.
+[2021-02-25 11:49:59 +0200] [23944] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 11:49:59 +0200] [23944] [INFO] Listening at: http://127.0.0.1:8000 (23944)
+[2021-02-25 11:49:59 +0200] [23944] [INFO] Using worker: sync
+[2021-02-25 11:49:59 +0200] [23947] [INFO] Booting worker with pid: 23947
+[2021-02-25 11:49:59 +0200] [23947] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/yoga/lib/python3.6/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'ypga_back'
+[2021-02-25 11:49:59 +0200] [23947] [INFO] Worker exiting (pid: 23947)
+[2021-02-25 11:49:59 +0200] [23944] [INFO] Shutting down: Master
+[2021-02-25 11:49:59 +0200] [23944] [INFO] Reason: Worker failed to boot.
+[2021-02-25 11:50:39 +0200] [23971] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 11:50:39 +0200] [23971] [INFO] Listening at: http://127.0.0.1:8000 (23971)
+[2021-02-25 11:50:39 +0200] [23971] [INFO] Using worker: sync
+[2021-02-25 11:50:39 +0200] [23974] [INFO] Booting worker with pid: 23974
+[2021-02-25 11:50:39 +0200] [23976] [INFO] Booting worker with pid: 23976
+[2021-02-25 11:50:39 +0200] [23977] [INFO] Booting worker with pid: 23977
+[2021-02-25 11:51:00 +0200] [23971] [INFO] Handling signal: term
+[2021-02-25 09:51:00 +0000] [23974] [INFO] Worker exiting (pid: 23974)
+[2021-02-25 09:51:00 +0000] [23976] [INFO] Worker exiting (pid: 23976)
+[2021-02-25 09:51:00 +0000] [23977] [INFO] Worker exiting (pid: 23977)
+[2021-02-25 11:51:00 +0200] [23971] [INFO] Shutting down: Master
+[2021-02-25 11:51:00 +0200] [23989] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 11:51:00 +0200] [23989] [INFO] Listening at: http://127.0.0.1:8000 (23989)
+[2021-02-25 11:51:00 +0200] [23989] [INFO] Using worker: sync
+[2021-02-25 11:51:00 +0200] [23992] [INFO] Booting worker with pid: 23992
+[2021-02-25 11:51:00 +0200] [23994] [INFO] Booting worker with pid: 23994
+[2021-02-25 11:51:01 +0200] [23996] [INFO] Booting worker with pid: 23996
+Internal Server Error: /admin/workout/trouble/1/change/
+Traceback (most recent call last):
+  File "/home/yoga/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/yoga/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yoga/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/yoga/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/yoga/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/yoga/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/yoga/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1656, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/yoga/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/yoga/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/yoga/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/yoga/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1580, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "/home/yoga/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1093, in save_model
+    obj.save()
+  File "/home/yoga/lib/python3.6/site-packages/django/db/models/base.py", line 754, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/yoga/lib/python3.6/site-packages/django/db/models/base.py", line 792, in save_base
+    force_update, using, update_fields,
+  File "/home/yoga/lib/python3.6/site-packages/django/db/models/base.py", line 870, in _save_table
+    for f in non_pks]
+  File "/home/yoga/lib/python3.6/site-packages/django/db/models/base.py", line 870, in <listcomp>
+    for f in non_pks]
+  File "/home/yoga/lib/python3.6/site-packages/django/db/models/fields/files.py", line 307, in pre_save
+    file.save(file.name, file.file, save=False)
+  File "/home/yoga/lib/python3.6/site-packages/django/db/models/fields/files.py", line 87, in save
+    self.name = self.storage.save(name, content, max_length=self.field.max_length)
+  File "/home/yoga/lib/python3.6/site-packages/django/core/files/storage.py", line 52, in save
+    return self._save(name, content)
+  File "/home/yoga/lib/python3.6/site-packages/django/core/files/storage.py", line 267, in _save
+    fd = os.open(full_path, self.OS_OPEN_FLAGS, 0o666)
+PermissionError: [Errno 13] Permission denied: '/home/yoga_vue_django/yoga_back/media/kotik_T5Ho0oc.jpg'
+Internal Server Error: /admin/workout/trouble/1/change/
+Traceback (most recent call last):
+  File "/home/yoga/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/yoga/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yoga/lib/python3.6/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/yoga/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/yoga/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/yoga/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/home/yoga/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1656, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/yoga/lib/python3.6/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/yoga/lib/python3.6/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/yoga/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/yoga/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1580, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "/home/yoga/lib/python3.6/site-packages/django/contrib/admin/options.py", line 1093, in save_model
+    obj.save()
+  File "/home/yoga/lib/python3.6/site-packages/django/db/models/base.py", line 754, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/yoga/lib/python3.6/site-packages/django/db/models/base.py", line 792, in save_base
+    force_update, using, update_fields,
+  File "/home/yoga/lib/python3.6/site-packages/django/db/models/base.py", line 870, in _save_table
+    for f in non_pks]
+  File "/home/yoga/lib/python3.6/site-packages/django/db/models/base.py", line 870, in <listcomp>
+    for f in non_pks]
+  File "/home/yoga/lib/python3.6/site-packages/django/db/models/fields/files.py", line 307, in pre_save
+    file.save(file.name, file.file, save=False)
+  File "/home/yoga/lib/python3.6/site-packages/django/db/models/fields/files.py", line 87, in save
+    self.name = self.storage.save(name, content, max_length=self.field.max_length)
+  File "/home/yoga/lib/python3.6/site-packages/django/core/files/storage.py", line 52, in save
+    return self._save(name, content)
+  File "/home/yoga/lib/python3.6/site-packages/django/core/files/storage.py", line 267, in _save
+    fd = os.open(full_path, self.OS_OPEN_FLAGS, 0o666)
+PermissionError: [Errno 13] Permission denied: '/home/yoga_vue_django/yoga_back/media/kotik.jpg'
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /favicon.ico
+[2021-02-25 12:02:17 +0200] [23989] [INFO] Handling signal: term
+[2021-02-25 10:02:17 +0000] [23992] [INFO] Worker exiting (pid: 23992)
+[2021-02-25 10:02:17 +0000] [23994] [INFO] Worker exiting (pid: 23994)
+[2021-02-25 10:02:17 +0000] [23996] [INFO] Worker exiting (pid: 23996)
+[2021-02-25 12:02:18 +0200] [23989] [INFO] Shutting down: Master
+[2021-02-25 12:02:18 +0200] [24119] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 12:02:18 +0200] [24119] [INFO] Listening at: http://127.0.0.1:8000 (24119)
+[2021-02-25 12:02:18 +0200] [24119] [INFO] Using worker: sync
+[2021-02-25 12:02:18 +0200] [24122] [INFO] Booting worker with pid: 24122
+[2021-02-25 12:02:18 +0200] [24123] [INFO] Booting worker with pid: 24123
+[2021-02-25 12:02:18 +0200] [24126] [INFO] Booting worker with pid: 24126
+[2021-02-25 12:08:04 +0200] [24119] [INFO] Handling signal: term
+[2021-02-25 10:08:04 +0000] [24122] [INFO] Worker exiting (pid: 24122)
+[2021-02-25 10:08:04 +0000] [24123] [INFO] Worker exiting (pid: 24123)
+[2021-02-25 10:08:04 +0000] [24126] [INFO] Worker exiting (pid: 24126)
+[2021-02-25 12:08:04 +0200] [24119] [INFO] Shutting down: Master
+[2021-02-25 12:08:04 +0200] [24169] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 12:08:04 +0200] [24169] [INFO] Listening at: http://127.0.0.1:8000 (24169)
+[2021-02-25 12:08:04 +0200] [24169] [INFO] Using worker: sync
+[2021-02-25 12:08:04 +0200] [24172] [INFO] Booting worker with pid: 24172
+[2021-02-25 12:08:04 +0200] [24174] [INFO] Booting worker with pid: 24174
+[2021-02-25 12:08:04 +0200] [24175] [INFO] Booting worker with pid: 24175
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /favicon.ico
+[2021-02-25 12:12:21 +0200] [24169] [INFO] Handling signal: term
+[2021-02-25 10:12:21 +0000] [24172] [INFO] Worker exiting (pid: 24172)
+[2021-02-25 10:12:21 +0000] [24174] [INFO] Worker exiting (pid: 24174)
+[2021-02-25 10:12:21 +0000] [24175] [INFO] Worker exiting (pid: 24175)
+[2021-02-25 12:12:22 +0200] [24169] [INFO] Shutting down: Master
+[2021-02-25 12:12:22 +0200] [24226] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 12:12:22 +0200] [24226] [INFO] Listening at: http://127.0.0.1:8000 (24226)
+[2021-02-25 12:12:22 +0200] [24226] [INFO] Using worker: sync
+[2021-02-25 12:12:22 +0200] [24229] [INFO] Booting worker with pid: 24229
+[2021-02-25 12:12:22 +0200] [24231] [INFO] Booting worker with pid: 24231
+[2021-02-25 12:12:22 +0200] [24233] [INFO] Booting worker with pid: 24233
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /medi/kotik.jpg
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico

@@ -93,8 +93,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'yoga',
-        'USER': 'postgres',
-        'PASSWORD': '1111',
+        'USER': 'yoga_dev',
+        'PASSWORD': 'yoga_dev',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -155,9 +155,10 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'templates/doc') ,
     ]
 STATIC_URL = '/static/'
-
+STATIC_ROOT = '/static/'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 REST_FRAMEWORK = {
