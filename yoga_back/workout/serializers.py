@@ -153,8 +153,12 @@ class WorkoutSerializer(serializers.ModelSerializer):
         if filters:
             filters = dict(filters)
             print(filters)
+            if filters['sex'][0] != 'U':
+                filters['sex'][0] = [filters['sex'][0], 'U']
+            else:
+                filters['sex'][0] = list(filters['sex'][0])
             workouts = Workout.objects.filter(
-                Q(sex=filters['sex'][0]) &
+                Q(sex__in=filters['sex'][0]) &
                 Q(periodicity__lte=filters['periodicity'][0]) &
                 Q(level=filters['level'][0]) &
                 Q(troubles__pk__in=ast.literal_eval(filters['troubles'][0]))

@@ -8,8 +8,8 @@ WORKOUT_LEVELS = (
     ('Продвинутый', 'Продвинутый'),
 )
 SEX_CHOICES = [
-    ('M', 'M'),
-    ('F', 'F'),
+    ('M', 'M', 'U'),
+    ('F', 'F', 'U'),
 ]
 class Trouble(models.Model):
     name = models.CharField(verbose_name=_('Название'), max_length=255, unique=True)

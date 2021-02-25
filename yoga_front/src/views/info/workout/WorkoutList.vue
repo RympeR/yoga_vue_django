@@ -2,7 +2,7 @@
     <b-row>
         <b-col>
             <div class="mb-4">
-                <b-button :to="{name: 'workout-create'}" variant="primary" size="md">
+                <b-button class='mr-4' :to="{name: 'workout-create'}" variant="primary" size="md">
                     Добавить
                 </b-button>
                 <b-button v-b-toggle.sidebar-filter variant="info">Фильтр</b-button>

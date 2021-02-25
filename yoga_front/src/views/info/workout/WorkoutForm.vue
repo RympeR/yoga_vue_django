@@ -50,7 +50,7 @@
                 <span class="form__label">Периодичность</span>
                 <div class="form__control">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-5">
                             <b-form-select
                                 v-model="workout.periodicity"
                                 :options="periodicity"
@@ -80,7 +80,7 @@
                 <span class="form__label">Пол</span>
                 <div class="form__control">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-5">
                             <b-form-select
                                 v-model="workout.sex"
                                 :options="workoutSex"
@@ -95,7 +95,7 @@
                 <span class="form__label">Уровень сложности</span>
                 <div class="form__control">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-5">
                             <b-form-select
                                 v-model="workout.level"
                                 :options="workoutLevels"
@@ -222,7 +222,7 @@ export default {
             id: null,
             workoutLevels: ['Простой', 'Средний', 'Продвинутый'],
             periodicity: [1,2,3,4,5],
-            workoutSex: ['M', 'F'],
+            workoutSex: ['U', 'M', 'F'],
             alert: false,
             troublesList: []
         }

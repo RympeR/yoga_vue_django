@@ -3,7 +3,7 @@ define({
   "version": "0.3.0",
   "description": "apiDoc yoga project",
   "title": "API for Yog app",
-  "url": "http://185.233.118.44",
+  "url": "http://apidoc.maximusapp.com",
   "order": [
     "GetUser",
     "PostUser"

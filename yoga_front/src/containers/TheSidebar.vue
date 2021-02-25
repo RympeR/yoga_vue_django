@@ -7,33 +7,23 @@
                 </span>
                 <b-link class="sidebar__link" :to="{name: 'home'}">Главная</b-link>
             </div>
-            <hr>
             <div class="sidebar__item">
                 <span class="sidebar__icon">
                     <img src="@/assets/img/icons/gear.png" alt="">
                 </span>
                 <b-link class="sidebar__link" :to="{name: 'workouts'}">Тренировки</b-link>
             </div>
-            <hr>
             <div class="sidebar__item">
                 <span class="sidebar__icon">
                     <img src="@/assets/img/icons/gear.png" alt="">
                 </span>
                 <b-link class="sidebar__link" :to="{name: 'troubles'}">Проблемы</b-link>
             </div>
-            <hr>
             <div class="sidebar__item">
                 <span class="sidebar__icon">
                     <img src="@/assets/img/icons/tested.png" alt="">
                 </span>
                 <b-link class="sidebar__link" :to="{name: 'students'}">Пользователи</b-link>
-            </div>
-            <hr>
-            <div class="sidebar__item">
-                <span class="sidebar__icon">
-                    <img src="@/assets/img/icons/passwor.png" alt="">
-                </span>
-                <b-link class="sidebar__link" :to="{name: 'change-password'}">Изменить пароль</b-link>
             </div>
         </ul>
     </div>
