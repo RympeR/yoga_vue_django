@@ -762,3 +762,45 @@ Not Found: /index.html
 Not Found: /index.html
 Not Found: /index.html
 Not Found: /index.html
+[2021-02-25 15:30:31 +0200] [28740] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 15:30:31 +0200] [28740] [INFO] Listening at: http://127.0.0.1:8000 (28740)
+[2021-02-25 15:30:31 +0200] [28740] [INFO] Using worker: sync
+[2021-02-25 15:30:31 +0200] [28743] [INFO] Booting worker with pid: 28743
+[2021-02-25 15:30:31 +0200] [28744] [INFO] Booting worker with pid: 28744
+[2021-02-25 15:30:31 +0200] [28747] [INFO] Booting worker with pid: 28747
+Method Not Allowed: /api/user/admin-login/
+Bad Request: /api/user/admin-login/
+Bad Request: /api/user/admin-login/
+Bad Request: /api/user/admin-login/
+Bad Request: /api/user/admin-login/
+[2021-02-25 15:35:37 +0200] [28740] [INFO] Handling signal: term
+[2021-02-25 13:35:37 +0000] [28743] [INFO] Worker exiting (pid: 28743)
+[2021-02-25 13:35:37 +0000] [28744] [INFO] Worker exiting (pid: 28744)
+[2021-02-25 13:35:37 +0000] [28747] [INFO] Worker exiting (pid: 28747)
+[2021-02-25 15:35:38 +0200] [28740] [INFO] Shutting down: Master
+[2021-02-25 15:35:38 +0200] [28853] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 15:35:38 +0200] [28853] [INFO] Listening at: http://127.0.0.1:8000 (28853)
+[2021-02-25 15:35:38 +0200] [28853] [INFO] Using worker: sync
+[2021-02-25 15:35:38 +0200] [28856] [INFO] Booting worker with pid: 28856
+[2021-02-25 15:35:38 +0200] [28858] [INFO] Booting worker with pid: 28858
+[2021-02-25 15:35:38 +0200] [28857] [INFO] Booting worker with pid: 28857
+Bad Request: /api/user/admin-login/
+Bad Request: /api/user/admin-login/
+Not Found: /
+[2021-02-25 15:39:01 +0200] [28964] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 15:39:01 +0200] [28964] [INFO] Listening at: http://127.0.0.1:8000 (28964)
+[2021-02-25 15:39:01 +0200] [28964] [INFO] Using worker: sync
+[2021-02-25 15:39:01 +0200] [28967] [INFO] Booting worker with pid: 28967
+[2021-02-25 15:39:01 +0200] [28969] [INFO] Booting worker with pid: 28969
+[2021-02-25 15:39:01 +0200] [28970] [INFO] Booting worker with pid: 28970
+[2021-02-25 15:39:54 +0200] [28964] [INFO] Handling signal: term
+[2021-02-25 13:39:54 +0000] [28967] [INFO] Worker exiting (pid: 28967)
+[2021-02-25 13:39:55 +0000] [28969] [INFO] Worker exiting (pid: 28969)
+[2021-02-25 13:39:55 +0000] [28970] [INFO] Worker exiting (pid: 28970)
+[2021-02-25 15:39:55 +0200] [28964] [INFO] Shutting down: Master
+[2021-02-25 15:39:55 +0200] [28999] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 15:39:55 +0200] [28999] [INFO] Listening at: http://127.0.0.1:8000 (28999)
+[2021-02-25 15:39:55 +0200] [28999] [INFO] Using worker: sync
+[2021-02-25 15:39:55 +0200] [29002] [INFO] Booting worker with pid: 29002
+[2021-02-25 15:39:55 +0200] [29004] [INFO] Booting worker with pid: 29004
+[2021-02-25 15:39:55 +0200] [29005] [INFO] Booting worker with pid: 29005
