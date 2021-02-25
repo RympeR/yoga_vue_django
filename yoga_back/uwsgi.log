@@ -804,3 +804,110 @@ Not Found: /
 [2021-02-25 15:39:55 +0200] [29002] [INFO] Booting worker with pid: 29002
 [2021-02-25 15:39:55 +0200] [29004] [INFO] Booting worker with pid: 29004
 [2021-02-25 15:39:55 +0200] [29005] [INFO] Booting worker with pid: 29005
+[2021-02-25 15:50:48 +0200] [29408] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 15:50:48 +0200] [29408] [INFO] Listening at: http://127.0.0.1:8000 (29408)
+[2021-02-25 15:50:48 +0200] [29408] [INFO] Using worker: sync
+[2021-02-25 15:50:48 +0200] [29411] [INFO] Booting worker with pid: 29411
+[2021-02-25 15:50:48 +0200] [29412] [INFO] Booting worker with pid: 29412
+[2021-02-25 15:50:48 +0200] [29415] [INFO] Booting worker with pid: 29415
+Unsupported Media Type: /api/user/admin-login/
+Unsupported Media Type: /api/user/admin-login/
+Unsupported Media Type: /api/user/admin-login/
+Unsupported Media Type: /api/user/admin-login/
+Unsupported Media Type: /api/user/admin-login/
+Unsupported Media Type: /api/user/admin-login/
+[2021-02-25 15:53:31 +0200] [29408] [INFO] Handling signal: term
+[2021-02-25 13:53:31 +0000] [29411] [INFO] Worker exiting (pid: 29411)
+[2021-02-25 13:53:31 +0000] [29412] [INFO] Worker exiting (pid: 29412)
+<QueryDict: {'email': ['test@gmail.com'], 'password': ['test']}>
+[2021-02-25 13:53:31 +0000] [29415] [INFO] Worker exiting (pid: 29415)
+[2021-02-25 15:53:32 +0200] [29408] [INFO] Shutting down: Master
+[2021-02-25 15:53:32 +0200] [29472] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 15:53:32 +0200] [29472] [INFO] Listening at: http://127.0.0.1:8000 (29472)
+[2021-02-25 15:53:32 +0200] [29472] [INFO] Using worker: sync
+[2021-02-25 15:53:32 +0200] [29475] [INFO] Booting worker with pid: 29475
+[2021-02-25 15:53:32 +0200] [29476] [INFO] Booting worker with pid: 29476
+[2021-02-25 15:53:32 +0200] [29479] [INFO] Booting worker with pid: 29479
+Unsupported Media Type: /api/user/admin-login/
+Unsupported Media Type: /api/user/admin-login/
+Unsupported Media Type: /api/user/admin-login/
+Not Found: /api-admin/
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /
+Internal Server Error: /apidoc/
+Traceback (most recent call last):
+  File "/home/yoga/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/yoga/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yoga_vue_django/yoga_back/yoga_back/api_view.py", line 4, in apidoc
+    return render(request, 'doc/index.html')
+  File "/home/yoga/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yoga/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/yoga/lib/python3.6/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: doc/index.html
+Not Found: /
+Not Found: /
+Not Found: /wp-includes/wlwmanifest.xml
+Not Found: /xmlrpc.php
+Not Found: /
+Not Found: /blog/wp-includes/wlwmanifest.xml
+Not Found: /web/wp-includes/wlwmanifest.xml
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+Not Found: /website/wp-includes/wlwmanifest.xml
+Not Found: /wp/wp-includes/wlwmanifest.xml
+Not Found: /news/wp-includes/wlwmanifest.xml
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+Not Found: /test/wp-includes/wlwmanifest.xml
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+Not Found: /site/wp-includes/wlwmanifest.xml
+Not Found: /cms/wp-includes/wlwmanifest.xml
+Not Found: /sito/wp-includes/wlwmanifest.xml
+Unsupported Media Type: /api/user/admin-login/
+Not Found: /
+Not Found: /wp-includes/wlwmanifest.xml
+Not Found: /xmlrpc.php
+Not Found: /
+Not Found: /blog/wp-includes/wlwmanifest.xml
+Not Found: /web/wp-includes/wlwmanifest.xml
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+Not Found: /website/wp-includes/wlwmanifest.xml
+Not Found: /wp/wp-includes/wlwmanifest.xml
+Not Found: /news/wp-includes/wlwmanifest.xml
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+Not Found: /test/wp-includes/wlwmanifest.xml
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+Not Found: /site/wp-includes/wlwmanifest.xml
+Not Found: /cms/wp-includes/wlwmanifest.xml
+Not Found: /sito/wp-includes/wlwmanifest.xml
+Not Found: /
+Not Found: /api-admin/
+Not Found: /api/
+Not Found: /api/workout
+Not Found: /api/workout/
+Not Found: /
+[2021-02-25 16:13:28 +0200] [29472] [INFO] Handling signal: term
+[2021-02-25 14:13:28 +0000] [29475] [INFO] Worker exiting (pid: 29475)
+[2021-02-25 14:13:28 +0000] [29476] [INFO] Worker exiting (pid: 29476)
+[2021-02-25 14:13:28 +0000] [29479] [INFO] Worker exiting (pid: 29479)
+[2021-02-25 16:13:28 +0200] [29472] [INFO] Shutting down: Master
+[2021-02-25 16:13:29 +0200] [29821] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 16:13:29 +0200] [29821] [INFO] Listening at: http://127.0.0.1:8000 (29821)
+[2021-02-25 16:13:29 +0200] [29821] [INFO] Using worker: sync
+[2021-02-25 16:13:29 +0200] [29824] [INFO] Booting worker with pid: 29824
+[2021-02-25 16:13:29 +0200] [29826] [INFO] Booting worker with pid: 29826
+[2021-02-25 16:13:29 +0200] [29827] [INFO] Booting worker with pid: 29827
+Unsupported Media Type: /api/user/admin-login/
+Unsupported Media Type: /api/user/admin-login/
+Unsupported Media Type: /api/user/admin-login/
+Unsupported Media Type: /api/user/admin-login/
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico

@@ -19,8 +19,8 @@ class AdminSerializer(serializers.ModelSerializer):
         try:
             print(validated_data)
             user = Admin.objects.get(
-                Q(email=validated_data['email'][0]) &
-                Q(password=validated_data['password'][0]) 
+                Q(email=validated_data['email']) &
+                Q(password=validated_data['password']) 
             )
             return user
         except Exception:
