@@ -3,7 +3,7 @@
     "version": "0.3.0",
     "description": "apiDoc yoga project",
     "title": "API for Yog app",
-    "url" : "https://api.github.com/v1",
+    "url" : "http://185.233.118.44/",
     "order": [
       "GetUser",
       "PostUser"
