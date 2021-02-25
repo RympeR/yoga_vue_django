@@ -762,3 +762,9 @@ Not Found: /index.html
 Not Found: /index.html
 Not Found: /index.html
 Not Found: /index.html
+[2021-02-25 17:16:03 +0200] [30998] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 17:16:03 +0200] [30998] [INFO] Listening at: http://127.0.0.1:8000 (30998)
+[2021-02-25 17:16:03 +0200] [30998] [INFO] Using worker: sync
+[2021-02-25 17:16:03 +0200] [31001] [INFO] Booting worker with pid: 31001
+[2021-02-25 17:16:03 +0200] [31003] [INFO] Booting worker with pid: 31003
+[2021-02-25 17:16:04 +0200] [31005] [INFO] Booting worker with pid: 31005
