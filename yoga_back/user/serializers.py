@@ -1,9 +1,30 @@
 from django.contrib.auth.models import Group, Permission
 from rest_framework import serializers
-from .models import User
+from .models import User, Admin
+from django.db.models import Q
 from django.shortcuts import get_object_or_404
 
 
+class AdminSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model=Admin
+        fields = (
+            'email',
+            'password'
+        )
+    
+    @staticmethod
+    def get(validated_data):
+        try:
+            user = Admin.objects.get(
+                Q(email=validated_data['email'][0]) &
+                Q(password=validated_data['password'][0]) 
+            )
+            return user
+        except Exception:
+            return None
+        
 class UserSerializer(serializers.ModelSerializer):
 
     class Meta:

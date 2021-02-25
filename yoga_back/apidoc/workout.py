@@ -37,13 +37,13 @@
     {
     "workout_id": 4,
     "name": "t",
-    "video": "http://127.0.0.1:8000/media/Kitten_Zoom_Filter_Mishap_VEC0LdZ.mp4",
+    "video": "http://185.233.118.44/Kitten_Zoom_Filter_Mishap_VEC0LdZ.mp4",
     "duration": "t",
     "periodicity": "4",
     "level": "Средний",
     "description": "t",
     "value": "t",
-    "image": "http://127.0.0.1:8000/media/kotik_LFuK6N5.jpg",
+    "image": "http://185.233.118.44/kotik_LFuK6N5.jpg",
     "sex": "M",
     "troubles": [
         {
@@ -73,11 +73,11 @@
         {
             "id": 4,
             "name": "t",
-            "video": "http://127.0.0.1:8000/media/Kitten_Zoom_Filter_Mishap_VEC0LdZ.mp4",
+            "video": "http://185.233.118.44/Kitten_Zoom_Filter_Mishap_VEC0LdZ.mp4",
             "duration": "t",
             "periodicity": "4",
             "level": "Средний",
-            "image": "http://127.0.0.1:8000/media/kotik_LFuK6N5.jpg",
+            "image": "http://185.233.118.44/kotik_LFuK6N5.jpg",
             "description": "t",
             "value": "t",
             "sex": "M"
@@ -177,7 +177,7 @@
         {
             "id": 4,
             "name": "t",
-            "image": "http://127.0.0.1:8000/media/kotik_LFuK6N5.jpg"
+            "image": "http://185.233.118.44/kotik_LFuK6N5.jpg"
         }
     ]
 }
@@ -203,7 +203,7 @@
         {
             "id": 4,
             "name": "t",
-            "image": "http://127.0.0.1:8000/media/kotik_LFuK6N5.jpg"
+            "image": "http://185.233.118.44/kotik_LFuK6N5.jpg"
         }
     ]
 }
@@ -245,7 +245,7 @@
    
             "id": 2,
             "name": "котик вернулся на коленки",
-            "image": "http://127.0.0.1:8000/media/kotik_6d69TZ3.jpg"
+            "image": "http://185.233.118.44/kotik_6d69TZ3.jpg"
     }
 
     
@@ -268,12 +268,12 @@
         {
             "id": 2,
             "name": "котик вернулся на коленки",
-            "image": "http://127.0.0.1:8000/media/kotik_6d69TZ3.jpg"
+            "image": "http://185.233.118.44/kotik_6d69TZ3.jpg"
         },
         {
             "id": 3,
             "name": "котик еще не на коленках",
-            "image": "http://127.0.0.1:8000/media/ghrweherherh_dtDHOan.jpg"
+            "image": "http://185.233.118.44/ghrweherherh_dtDHOan.jpg"
         }
     ]
 }
@@ -319,7 +319,7 @@
     {
         "trouble_id": 4,
         "name": "test",
-        "image": "http://127.0.0.1:8000/media/kotik_LFuK6N5.jpg"
+        "image": "http://185.233.118.44/kotik_LFuK6N5.jpg"
     }
     
 

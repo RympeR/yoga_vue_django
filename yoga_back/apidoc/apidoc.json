@@ -1,8 +1,8 @@
 {
-    "name": "apidoc-example",
+    "name": "Yoga-apidoc",
     "version": "0.3.0",
-    "description": "apiDoc example project",
-    "title": "Custom apiDoc browser title",
+    "description": "apiDoc yoga project",
+    "title": "API for Yog app",
     "url" : "https://api.github.com/v1",
     "order": [
       "GetUser",
