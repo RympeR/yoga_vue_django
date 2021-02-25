@@ -721,3 +721,31 @@ Not Found: /medi/kotik.jpg
 Not Found: /favicon.ico
 Not Found: /favicon.ico
 Not Found: /favicon.ico
+Not Found: /medi/kotik.jpg
+Internal Server Error: /apidoc/
+Traceback (most recent call last):
+  File "/home/yoga/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/yoga/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yoga_vue_django/yoga_back/yoga_back/api_view.py", line 4, in apidoc
+    return render(request, 'doc/index.html')
+  File "/home/yoga/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yoga/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/yoga/lib/python3.6/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: doc/index.html
+Not Found: /
+[2021-02-25 12:39:54 +0200] [24226] [INFO] Handling signal: term
+[2021-02-25 10:39:54 +0000] [24229] [INFO] Worker exiting (pid: 24229)
+[2021-02-25 10:39:54 +0000] [24231] [INFO] Worker exiting (pid: 24231)
+[2021-02-25 10:39:54 +0000] [24233] [INFO] Worker exiting (pid: 24233)
+[2021-02-25 12:39:54 +0200] [24226] [INFO] Shutting down: Master
+[2021-02-25 12:39:54 +0200] [24723] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 12:39:54 +0200] [24723] [INFO] Listening at: http://127.0.0.1:8000 (24723)
+[2021-02-25 12:39:54 +0200] [24723] [INFO] Using worker: sync
+[2021-02-25 12:39:54 +0200] [24726] [INFO] Booting worker with pid: 24726
+[2021-02-25 12:39:54 +0200] [24728] [INFO] Booting worker with pid: 24728
+[2021-02-25 12:39:54 +0200] [24729] [INFO] Booting worker with pid: 24729
