@@ -222,7 +222,7 @@ export default {
             id: null,
             workoutLevels: ['Простой', 'Средний', 'Продвинутый'],
             periodicity: [1,2,3,4,5],
-            workoutSex: ['M', 'F'],
+            workoutSex: ['U', 'M', 'F'],
             alert: false,
             troublesList: []
         }
