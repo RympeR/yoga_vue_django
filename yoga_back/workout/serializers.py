@@ -75,7 +75,7 @@ class WorkoutSerializer(serializers.ModelSerializer):
         print(validated_data['troubles'])
         print(ast.literal_eval(validated_data['troubles']))
         troubles_id = []
-        for trouble_id in ast.literal_eval(validated_data['troubles'][0]):
+        for trouble_id in ast.literal_eval(validated_data['troubles']):
             try: 
                 troubles_id.append(int(trouble_id))
             except TypeError:

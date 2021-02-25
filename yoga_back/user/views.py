@@ -89,7 +89,7 @@ class UserListAPI(APIView):
 
 @permission_classes((permissions.AllowAny,))
 class AdminAPI(APIView):
-    parser_classes = (MultiPartParser,)
+    parser_classes=(MultiPartParser,)
     def post(self, *args, **kwargs):
         admin = AdminSerializer.get(self.request.data)
         if admin:
