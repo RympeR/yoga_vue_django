@@ -749,3 +749,16 @@ Not Found: /
 [2021-02-25 12:39:54 +0200] [24726] [INFO] Booting worker with pid: 24726
 [2021-02-25 12:39:54 +0200] [24728] [INFO] Booting worker with pid: 24728
 [2021-02-25 12:39:54 +0200] [24729] [INFO] Booting worker with pid: 24729
+[2021-02-25 13:28:26 +0200] [25548] [INFO] Starting gunicorn 20.0.4
+[2021-02-25 13:28:26 +0200] [25548] [INFO] Listening at: http://127.0.0.1:8000 (25548)
+[2021-02-25 13:28:26 +0200] [25548] [INFO] Using worker: sync
+[2021-02-25 13:28:26 +0200] [25551] [INFO] Booting worker with pid: 25551
+[2021-02-25 13:28:26 +0200] [25552] [INFO] Booting worker with pid: 25552
+[2021-02-25 13:28:26 +0200] [25555] [INFO] Booting worker with pid: 25555
+Not Found: /index.html
+Not Found: /index.html
+Not Found: /index.html
+Not Found: /index.html
+Not Found: /index.html
+Not Found: /index.html
+Not Found: /index.html
