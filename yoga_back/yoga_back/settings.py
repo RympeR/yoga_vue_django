@@ -155,9 +155,10 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'templates/doc') ,
     ]
 STATIC_URL = '/static/'
-
+STATIC_ROOT = '/static/'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 REST_FRAMEWORK = {
