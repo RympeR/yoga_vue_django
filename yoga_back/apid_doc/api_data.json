@@ -9,7 +9,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "    HTTP/1.1 200 OK\n    {\n    \"results\": [\n        {\n            \"id\": 2,\n            \"name\": \"котик вернулся на коленки\",\n            \"image\": \"http://127.0.0.1:8000/media/kotik_6d69TZ3.jpg\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"котик еще не на коленках\",\n            \"image\": \"http://127.0.0.1:8000/media/ghrweherherh_dtDHOan.jpg\"\n        }\n    ]\n}",
+          "content": "    HTTP/1.1 200 OK\n    {\n    \"results\": [\n        {\n            \"id\": 2,\n            \"name\": \"котик вернулся на коленки\",\n            \"image\": \"http://185.233.118.44/kotik_6d69TZ3.jpg\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"котик еще не на коленках\",\n            \"image\": \"http://185.233.118.44/ghrweherherh_dtDHOan.jpg\"\n        }\n    ]\n}",
           "type": "json"
         }
       ]
@@ -139,7 +139,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n    \"trouble_id\": 4,\n    \"name\": \"test\",\n    \"image\": \"http://127.0.0.1:8000/media/kotik_LFuK6N5.jpg\"\n}",
+          "content": "HTTP/1.1 200 OK\n{\n    \"trouble_id\": 4,\n    \"name\": \"test\",\n    \"image\": \"http://185.233.118.44/kotik_LFuK6N5.jpg\"\n}",
           "type": "json"
         }
       ]
@@ -241,7 +241,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n\n        \"id\": 2,\n        \"name\": \"котик вернулся на коленки\",\n        \"image\": \"http://127.0.0.1:8000/media/kotik_6d69TZ3.jpg\"\n}",
+          "content": "HTTP/1.1 200 OK\n{\n\n        \"id\": 2,\n        \"name\": \"котик вернулся на коленки\",\n        \"image\": \"http://185.233.118.44/kotik_6d69TZ3.jpg\"\n}",
           "type": "json"
         }
       ]
@@ -324,7 +324,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n    \"id\": 1,\n    \"image\": \"http://127.0.0.1:8000/media/user/YFDNcvTLEhqx.jpg\",\n    \"first_name\": \"admin\",\n    \"last_name\": \"admin\"\n}",
+          "content": "HTTP/1.1 200 OK\n{\n    \"id\": 1,\n    \"image\": \"http://185.233.118.44/media/YFDNcvTLEhqx.jpg\",\n    \"first_name\": \"admin\",\n    \"last_name\": \"admin\"\n}",
           "type": "json"
         }
       ]
@@ -409,7 +409,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n    \"user_id\": 1,\n    \"image\": \"http://127.0.0.1:8000/media/user/YFDNcvTLEhqx.jpg\",\n    \"first_name\": \"admin\",\n    \"last_name\": \"admin\"\n}",
+          "content": "HTTP/1.1 200 OK\n{\n    \"user_id\": 1,\n    \"image\": \"http://185.233.118.44/user/YFDNcvTLEhqx.jpg\",\n    \"first_name\": \"admin\",\n    \"last_name\": \"admin\"\n}",
           "type": "json"
         }
       ]
@@ -508,7 +508,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "    HTTP/1.1 200 OK\n    {\n    \"results\": [\n        {\n            \"id\": 4,\n            \"name\": \"t\",\n            \"video\": \"http://127.0.0.1:8000/media/Kitten_Zoom_Filter_Mishap_VEC0LdZ.mp4\",\n            \"duration\": \"t\",\n            \"periodicity\": \"4\",\n            \"level\": \"Средний\",\n            \"image\": \"http://127.0.0.1:8000/media/kotik_LFuK6N5.jpg\",\n            \"description\": \"t\",\n            \"value\": \"t\",\n            \"sex\": \"M\"\n        }\n    ]\n}",
+          "content": "    HTTP/1.1 200 OK\n    {\n    \"results\": [\n        {\n            \"id\": 4,\n            \"name\": \"t\",\n            \"video\": \"http://185.233.118.44/Kitten_Zoom_Filter_Mishap_VEC0LdZ.mp4\",\n            \"duration\": \"t\",\n            \"periodicity\": \"4\",\n            \"level\": \"Средний\",\n            \"image\": \"http://185.233.118.44/kotik_LFuK6N5.jpg\",\n            \"description\": \"t\",\n            \"value\": \"t\",\n            \"sex\": \"M\"\n        }\n    ]\n}",
           "type": "json"
         }
       ]
@@ -887,7 +887,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "    HTTP/1.1 200 OK\n    {\n    \"results\": [\n        {\n            \"id\": 4,\n            \"name\": \"t\",\n            \"image\": \"http://127.0.0.1:8000/media/kotik_LFuK6N5.jpg\"\n        }\n    ]\n}\n}",
+          "content": "    HTTP/1.1 200 OK\n    {\n    \"results\": [\n        {\n            \"id\": 4,\n            \"name\": \"t\",\n            \"image\": \"http://185.233.118.44/kotik_LFuK6N5.jpg\"\n        }\n    ]\n}\n}",
           "type": "json"
         }
       ]
@@ -950,7 +950,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "    HTTP/1.1 200 OK\n    {\n    \"results\": [\n        {\n            \"id\": 4,\n            \"name\": \"t\",\n            \"image\": \"http://127.0.0.1:8000/media/kotik_LFuK6N5.jpg\"\n        }\n    ]\n}\n}",
+          "content": "    HTTP/1.1 200 OK\n    {\n    \"results\": [\n        {\n            \"id\": 4,\n            \"name\": \"t\",\n            \"image\": \"http://185.233.118.44/kotik_LFuK6N5.jpg\"\n        }\n    ]\n}\n}",
           "type": "json"
         }
       ]
@@ -1133,7 +1133,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "    HTTP/1.1 200 OK\n    {\n    \"workout_id\": 4,\n    \"name\": \"t\",\n    \"video\": \"http://127.0.0.1:8000/media/Kitten_Zoom_Filter_Mishap_VEC0LdZ.mp4\",\n    \"duration\": \"t\",\n    \"periodicity\": \"4\",\n    \"level\": \"Средний\",\n    \"description\": \"t\",\n    \"value\": \"t\",\n    \"image\": \"http://127.0.0.1:8000/media/kotik_LFuK6N5.jpg\",\n    \"sex\": \"M\",\n    \"troubles\": [\n        {\n            \"id\": 3,\n            \"name\": \"котик еще не на коленках\",\n            \"image\": \"Без_названия_dtDHOan.jpg\"\n        }\n    ]\n}",
+          "content": "    HTTP/1.1 200 OK\n    {\n    \"workout_id\": 4,\n    \"name\": \"t\",\n    \"video\": \"http://185.233.118.44/Kitten_Zoom_Filter_Mishap_VEC0LdZ.mp4\",\n    \"duration\": \"t\",\n    \"periodicity\": \"4\",\n    \"level\": \"Средний\",\n    \"description\": \"t\",\n    \"value\": \"t\",\n    \"image\": \"http://185.233.118.44/kotik_LFuK6N5.jpg\",\n    \"sex\": \"M\",\n    \"troubles\": [\n        {\n            \"id\": 3,\n            \"name\": \"котик еще не на коленках\",\n            \"image\": \"Без_названия_dtDHOan.jpg\"\n        }\n    ]\n}",
           "type": "json"
         }
       ]

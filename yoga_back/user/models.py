@@ -21,3 +21,14 @@ class User(models.Model):
     def __str__(self):
         return self.first_name + ' ' + self.last_name
 
+class Admin(models.Model):
+    email = models.EmailField(verbose_name='Почта', max_length=255, unique=True)
+    password = models.CharField(verbose_name='Почта', max_length=255)
+
+    class Meta:
+        verbose_name = 'Администратор'
+        verbose_name_plural = 'Администраторы'
+        ordering = ['id']
+        
+    def __str__(self):
+        return self.email

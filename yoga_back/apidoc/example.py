@@ -42,7 +42,7 @@
 HTTP/1.1 200 OK
 {
     "id": 1,
-    "image": "http://127.0.0.1:8000/media/user/YFDNcvTLEhqx.jpg",
+    "image": "http://185.233.118.44/media/YFDNcvTLEhqx.jpg",
     "first_name": "admin",
     "last_name": "admin"
 }
@@ -68,7 +68,7 @@ HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 {
     "user_id": 1,
-    "image": "http://127.0.0.1:8000/media/user/YFDNcvTLEhqx.jpg",
+    "image": "http://185.233.118.44/user/YFDNcvTLEhqx.jpg",
     "first_name": "admin",
     "last_name": "admin"
 }

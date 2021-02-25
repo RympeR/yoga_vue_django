@@ -1,8 +1,8 @@
 define({
-  "name": "apidoc-example",
+  "name": "Yoga-apidoc",
   "version": "0.3.0",
-  "description": "apiDoc example project",
-  "title": "Custom apiDoc browser title",
+  "description": "apiDoc yoga project",
+  "title": "API for Yog app",
   "url": "https://api.github.com/v1",
   "order": [
     "GetUser",
@@ -17,7 +17,7 @@ define({
   "apidoc": "0.3.0",
   "generator": {
     "name": "apidoc",
-    "time": "2021-02-24T15:22:49.195Z",
+    "time": "2021-02-25T13:27:09.410Z",
     "url": "https://apidocjs.com",
     "version": "0.26.0"
   }
