@@ -93,8 +93,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'yoga',
-        'USER': 'yoga_dev',
-        'PASSWORD': 'yoga_dev',
+        'USER': 'postgres',
+        'PASSWORD': '1111',
         'HOST': 'localhost',
         'PORT': '5432',
     }
