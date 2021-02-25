@@ -3,7 +3,7 @@
   "version": "0.3.0",
   "description": "apiDoc yoga project",
   "title": "API for Yog app",
-  "url": "https://api.github.com/v1",
+  "url": "http://185.233.118.44/",
   "order": [
     "GetUser",
     "PostUser"
@@ -17,7 +17,7 @@
   "apidoc": "0.3.0",
   "generator": {
     "name": "apidoc",
-    "time": "2021-02-25T13:27:09.410Z",
+    "time": "2021-02-25T13:43:23.354Z",
     "url": "https://apidocjs.com",
     "version": "0.26.0"
   }
