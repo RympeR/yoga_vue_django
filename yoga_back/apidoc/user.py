@@ -3,7 +3,7 @@
     @apiGroup User
 
     @api {get}/api/user/profile/{user_id} 1. GetUserProfile
-    @apiSampleRequest http://apidoc.maximusapp.com
+    @apiSampleRequest http://api-yoga.maximusapp.com
 
     @apiParam {Number} user_id Id-User.
 
@@ -17,7 +17,7 @@
     HTTP/1.1 200 OK
     {
         "id": 1,
-        "image": "http://maximusapp.com/media/YFDNcvTLEhqx.jpg",
+        "image": "http://api-yoga.maximusapp.com/media/YFDNcvTLEhqx.jpg",
         "first_name": "admin",
         "last_name": "admin"
     }
@@ -30,7 +30,7 @@
     @apiGroup User
 
     @api {get}/api/user/create-profile/ 1.1 CreateUserProfile
-    @apiSampleRequest http://apidoc.maximusapp.com
+    @apiSampleRequest http://api-yoga.maximusapp.com
 
     @apiParam {str} first_name First user name
     @apiParam {str} last_name Last user name
@@ -51,7 +51,7 @@
     @apiGroup User
 
     @api {get}/api/user/update-profile/{user_id} 1.2 UpdateUserProfile
-    @apiSampleRequest http://apidoc.maximusapp.com
+    @apiSampleRequest http://api-yoga.maximusapp.com
 
     @apiParam {Number} user_id Id-User.
 
@@ -69,7 +69,7 @@
     HTTP/1.1 200 OK
     {
         "user_id": 1,
-        "image": "http://maximusapp.com/media/YFDNcvTLEhqx.jpg",
+        "image": "http://api-yoga.maximusapp.com/media/YFDNcvTLEhqx.jpg",
         "first_name": "admin",
         "last_name": "admin"
     }

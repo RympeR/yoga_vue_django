@@ -7,7 +7,7 @@ define({ "api": [
     "title": "3 Get troubles list",
     "sampleRequest": [
       {
-        "url": "http://apidoc.maximusapp.com"
+        "url": "http://api-yoga.maximusapp.com"
       }
     ],
     "success": {
@@ -39,7 +39,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n    \"results\": [\n        {\n            \"id\": 2,\n            \"name\": \"котик вернулся на коленки\",\n            \"image\": \"http://maximusapp.com/media/kotik_6d69TZ3.jpg\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"котик еще не на коленках\",\n            \"image\": \"http://maximusapp.com/media/ghrweherherh_dtDHOan.jpg\"\n        }\n    ]\n}",
+          "content": "HTTP/1.1 200 OK\n{\n    \"results\": [\n        {\n            \"id\": 2,\n            \"name\": \"котик вернулся на коленки\",\n            \"image\": \"http://api-yoga.maximusapp.com/media/kotik_6d69TZ3.jpg\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"котик еще не на коленках\",\n            \"image\": \"http://api-yoga.maximusapp.com/media/ghrweherherh_dtDHOan.jpg\"\n        }\n    ]\n}",
           "type": "json"
         }
       ]
@@ -56,7 +56,7 @@ define({ "api": [
     "title": "1.1 CreateUserProfile",
     "sampleRequest": [
       {
-        "url": "http://apidoc.maximusapp.com"
+        "url": "http://api-yoga.maximusapp.com"
       }
     ],
     "parameter": {
@@ -118,7 +118,7 @@ define({ "api": [
     "title": "1.2 UpdateUserProfile",
     "sampleRequest": [
       {
-        "url": "http://apidoc.maximusapp.com"
+        "url": "http://api-yoga.maximusapp.com"
       }
     ],
     "parameter": {
@@ -191,7 +191,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n    \"user_id\": 1,\n    \"image\": \"http://maximusapp.com/media/YFDNcvTLEhqx.jpg\",\n    \"first_name\": \"admin\",\n    \"last_name\": \"admin\"\n}",
+          "content": "HTTP/1.1 200 OK\n{\n    \"user_id\": 1,\n    \"image\": \"http://api-yoga.maximusapp.com/media/YFDNcvTLEhqx.jpg\",\n    \"first_name\": \"admin\",\n    \"last_name\": \"admin\"\n}",
           "type": "json"
         }
       ]
@@ -208,7 +208,7 @@ define({ "api": [
     "title": "1. GetUserProfile",
     "sampleRequest": [
       {
-        "url": "http://apidoc.maximusapp.com"
+        "url": "http://api-yoga.maximusapp.com"
       }
     ],
     "parameter": {
@@ -260,7 +260,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n    \"id\": 1,\n    \"image\": \"http://maximusapp.com/media/YFDNcvTLEhqx.jpg\",\n    \"first_name\": \"admin\",\n    \"last_name\": \"admin\"\n}",
+          "content": "HTTP/1.1 200 OK\n{\n    \"id\": 1,\n    \"image\": \"http://api-yoga.maximusapp.com/media/YFDNcvTLEhqx.jpg\",\n    \"first_name\": \"admin\",\n    \"last_name\": \"admin\"\n}",
           "type": "json"
         }
       ]
@@ -277,7 +277,7 @@ define({ "api": [
     "title": "2.1 Get workout filtered list",
     "sampleRequest": [
       {
-        "url": "http://apidoc.maximusapp.com"
+        "url": "http://api-yoga.maximusapp.com"
       }
     ],
     "parameter": {
@@ -343,7 +343,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n  \"results\": [\n        {\n            \"id\": 4,\n            \"name\": \"t\",\n            \"image\": \"http://maximusapp.com/media/kotik_LFuK6N5.jpg\"\n        }\n    ]\n}",
+          "content": "HTTP/1.1 200 OK\n{\n  \"results\": [\n        {\n            \"id\": 4,\n            \"name\": \"t\",\n            \"image\": \"http://api-yoga.maximusapp.com/media/kotik_LFuK6N5.jpg\"\n        }\n    ]\n}",
           "type": "json"
         }
       ]

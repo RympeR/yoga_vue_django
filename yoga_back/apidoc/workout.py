@@ -47,7 +47,7 @@
     @apiGroup Workout
 
     @api {get}/api/workout/get-workout-filtered-list/ 2.1 Get workout filtered list
-    @apiSampleRequest http://apidoc.maximusapp.com
+    @apiSampleRequest http://api-yoga.maximusapp.com
 
     @apiParam {String} Sex
     @apiParam {Number} Peridoicity
@@ -65,7 +65,7 @@
             {
                 "id": 4,
                 "name": "t",
-                "image": "http://maximusapp.com/media/kotik_LFuK6N5.jpg"
+                "image": "http://api-yoga.maximusapp.com/media/kotik_LFuK6N5.jpg"
             }
         ]
     }
