@@ -34,6 +34,7 @@ class UserSerializer(serializers.ModelSerializer):
             'id',
             'first_name',
             'last_name',
+            'sex',
             'image'
         )
 
@@ -42,6 +43,7 @@ class UserSerializer(serializers.ModelSerializer):
         user = User(
             first_name=validated_data['first_name'][0],
             last_name=validated_data['last_name'][0],
+            sex=validated_data['sex'][0],
             image=validated_data['image']
         )
         user.save()
@@ -52,6 +54,7 @@ class UserSerializer(serializers.ModelSerializer):
         user = get_object_or_404(User, pk=validated_data['user_id'])
         user.first_name = validated_data['first_name'][0]
         user.last_name = validated_data['last_name'][0]
+        user.sex=validated_data['sex'][0]
         try:
             user.image = validated_data['image'][0]
         except KeyError:

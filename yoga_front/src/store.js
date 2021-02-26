@@ -46,7 +46,7 @@ export default new Vuex.Store({
             console.log(user)
             return new Promise((resolve, reject) => {
                 commit('auth_request');
-                axios.post(process.env.VUE_LOGIN_HOST + '/api/user/admin-login/', {
+                axios.post('http://edunav-back.maximustest.ru/ru/api/user/admin-login/', {
                     email: user.email,
                     password: user.password
                 })
