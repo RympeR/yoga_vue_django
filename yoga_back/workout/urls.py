@@ -15,5 +15,4 @@ urlpatterns = [
     path('create-trouble/', TroubleAPI.as_view() ,name='TroubleCreate'),
     path('update-trouble/<int:trouble_id>/', TroubleAPI.as_view() ,name='TroubleUpdate'),
     path('delete-trouble/<int:trouble_id>/', TroubleAPI.as_view() ,name='TroubleDelete'),
-
 ]
