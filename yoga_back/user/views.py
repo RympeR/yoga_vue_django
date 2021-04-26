@@ -95,9 +95,15 @@ class AdminAPI(APIView):
         if admin:
             return Response(
                 {
+<<<<<<< HEAD
                     "success": True,
                     "admin": admin.email,
                     "auth_token": "AWSEGKWPOGKJgfewgwewegweg"
+=======
+                    'success': True,
+                    'admin': admin.email,
+                    'auth_token': 'tset'
+>>>>>>> d23c3407b89679c29a8a44b2d470490263ae3583
                 }
             )
         else:

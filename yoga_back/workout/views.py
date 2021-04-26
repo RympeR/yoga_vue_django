@@ -86,6 +86,23 @@ class TroubleList(APIView):
             }
         )
 
+@permission_classes((permissions.AllowAny,))
+@renderer_classes((JSONRenderer,))
+class TroubleListAPI(APIView):
+    def get(self, *args, **kwargs):
+        troubles = TroubleSerializer.getTroubleList()
+        troubles_list = troubles.values()
+        domain = self.request.get_host()
+        for ind, trouble in enumerate(troubles_list):
+            path_image = troubles[ind].image.url
+
+            image_url = 'http://{domain}{path}'.format(
+                domain=domain, path=path_image)
+            troubles_list[ind]['image'] = image_url
+        return Response(
+            troubles_list
+        )
+
 
 @permission_classes((permissions.AllowAny,))
 class WorkoutAPI(APIView):
@@ -228,6 +245,36 @@ class WorkoutInfo(APIView):
 
 @permission_classes((permissions.AllowAny,))
 @renderer_classes((JSONRenderer,))
+class WorkoutInfoAPI(APIView):
+    parser_classes = (MultiPartParser,)
+    def get(self, *args, **kwargs):
+        level = self.request.query_params.get('workoutSearch', None)
+        if level:
+            workouts = WorkoutSerializer.getList(filter_param=level)
+        else:
+            workouts = WorkoutSerializer.getList()
+
+        workouts_list = workouts.values()
+        domain = self.request.get_host()
+        for ind, workout in enumerate(workouts_list):
+            path_image = workouts[ind].image.url
+            path_video = workouts[ind].video.url
+            image_url = 'http://{domain}{path}'.format(
+                domain=domain, path=path_image)
+            video_url = 'http://{domain}{path}'.format(
+                domain=domain, path=path_video)
+            workouts_list[ind]['image'] = image_url
+            workouts_list[ind]['video'] = video_url
+
+        return Response(
+            {
+                "results": workouts_list
+            }
+        )
+
+
+@permission_classes((permissions.AllowAny,))
+@renderer_classes((JSONRenderer,))
 class WorkoutFilteredList(APIView):
     parser_classes = (MultiPartParser,)
     def get(self, *args, **kwargs):
@@ -245,6 +292,26 @@ class WorkoutFilteredList(APIView):
             {
                 "results": workouts_list,
             }
+        )
+
+
+@permission_classes((permissions.AllowAny,))
+@renderer_classes((JSONRenderer,))
+class WorkoutFilteredListAPI(APIView):
+    parser_classes = (MultiPartParser,)
+    def get(self, *args, **kwargs):
+        workouts = WorkoutSerializer.getFilteredList(self.request.data)
+        print(workouts)
+        workouts_list = workouts.values('id', 'name', 'image')
+        domain = self.request.get_host()
+        for ind, workout in enumerate(workouts_list):
+            path_image = workouts[ind].image.url
+            image_url = 'http://{domain}{path}'.format(
+                domain=domain, path=path_image)
+            workouts_list[ind]['image'] = image_url
+
+        return Response(
+            workouts_list
         )
 
 
