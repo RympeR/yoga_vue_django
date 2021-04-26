@@ -44,7 +44,7 @@ INSTALLED_APPS = [
 
     'workout',
     'user',
-
+    'silk',
     'corsheaders',
     'imagekit',
     'rest_framework',
@@ -58,6 +58,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'yoga_back.middle.DisableCSRFMiddleware',
+    'silk.middleware.SilkyMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',

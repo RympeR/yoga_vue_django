@@ -1,18 +1,5 @@
 {
-<<<<<<< HEAD
-  "name": "Yoga-apidoc",
-  "version": "0.3.0",
-  "description": "apiDoc yoga project",
-  "title": "API for Yog app",
-  "url": "http://api-yoga.maximusapp.com",
-  "order": [
-    "User",
-    "Workout",
-    "Trouble"
-  ]
-}
-=======
-    "name": "yoga-api",
+    "name": "Yoga-apidoc",
     "version": "0.1.0",
     "description": "Apidoc for yoga project",
     "title": "Yoga API",
@@ -27,4 +14,3 @@
         "withGenerator": true
     }
   }
->>>>>>> d23c3407b89679c29a8a44b2d470490263ae3583

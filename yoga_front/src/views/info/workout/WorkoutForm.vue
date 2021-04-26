@@ -47,21 +47,6 @@
                 </div>
             </div>
             <div class="form__item">
-                <span class="form__label">Периодичность</span>
-                <div class="form__control">
-                    <div class="row">
-                        <div class="col-5">
-                            <b-form-select
-                                v-model="workout.periodicity"
-                                :options="periodicity"
-                                value-field="level"
-                                text-field="level"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="form__item">
                 <span class="form__label">Длительность</span>
                 <div class="form__control">
                     <div class="row">
@@ -76,38 +61,7 @@
                     </div>
                 </div>
             </div>
-            <div class="form__item">
-                <span class="form__label">Пол</span>
-                <div class="form__control">
-                    <div class="row">
-                        <div class="col-5">
-                            <b-form-select
-                                v-model="workout.sex"
-                                :options="workoutSex"
-                                value-field="sex"
-                                text-field="sex"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="form__item">
-                <span class="form__label">Уровень сложности</span>
-                <div class="form__control">
-                    <div class="row">
-                        <div class="col-5">
-                            <b-form-select
-                                v-model="workout.level"
-                                :options="workoutLevels"
-                                value-field="level"
-                                text-field="level"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="form__item">
+           <div class="form__item">
                 <span class="form__label">Изображение</span>
                 <div class="form__control">
                     <template v-if="image">
@@ -191,6 +145,58 @@
                     </div>
                 </div>
             </b-tab>
+            <b-tab title="Дни">
+                <div class="form__item" v-for="day in days" v-bind:key="day.id">
+                    <!-- <span class="form__label" v-if="trouble_id !== trouble.id" :set="trouble_id = trouble.id">{{trouble.name}}</span> -->
+                    <div class="form__control">
+
+                        <b-form-checkbox
+                            v-model="dayList"
+                            name="checkbox-1"
+
+                            :value="day.id"
+                            :unchecked-value="null"
+                        >
+                            {{ day.name }}
+                        </b-form-checkbox>
+                    </div>
+                </div>
+            </b-tab>
+            <b-tab title="Уровни">
+                <div class="form__item" v-for="level in levels" v-bind:key="level.id">
+                    <!-- <span class="form__label" v-if="trouble_id !== trouble.id" :set="trouble_id = trouble.id">{{trouble.name}}</span> -->
+                    <div class="form__control">
+
+                        <b-form-checkbox
+                            v-model="levelList"
+                            name="checkbox-1"
+
+                            :value="level.id"
+                            :unchecked-value="null"
+                        >
+                            {{ level.name }}
+                        </b-form-checkbox>
+                    </div>
+                </div>
+            </b-tab>
+            <b-tab title="Пол">
+                <div class="form__item" v-for="sex in sexes" v-bind:key="sex.id">
+                    <!-- <span class="form__label" v-if="trouble_id !== trouble.id" :set="trouble_id = trouble.id">{{trouble.name}}</span> -->
+                    <div class="form__control">
+
+                        <b-form-checkbox
+                            v-model="sexList"
+                            name="checkbox-1"
+
+                            :value="sex.id"
+                            :unchecked-value="null"
+                        >
+                            {{ sex.name }}
+                        </b-form-checkbox>
+                    </div>
+                </div>
+            </b-tab>
+
         </b-tabs>
 
         <div class="form__item form__item_submit">
@@ -204,27 +210,31 @@
 <script>
 import WorkoutMixin from '@/mixins/info/WorkoutMixin';
 import TroubleMixin from '@/mixins/info/TroubleMixin';
-// import 'quill/dist/quill.core.css'
-// import 'quill/dist/quill.snow.css'
-// import 'quill/dist/quill.bubble.css'
-
-// import { quillEditor } from 'vue-quill-editor'
+import DayMixin from '@/mixins/info/DayMixin';
+import LevelMixin from '@/mixins/info/LevelMixin';
+import SexMixin from '@/mixins/info/SexMixin';
 
 
 export default {
     name: 'WorkoutForm',
-    mixins: [WorkoutMixin, TroubleMixin],
+    mixins: [
+        WorkoutMixin, 
+        TroubleMixin,
+        DayMixin,
+        LevelMixin,
+        SexMixin
+    ],
     components: {
         
     },
     data () {
         return {
             id: null,
-            workoutLevels: ['Простой', 'Средний', 'Продвинутый'],
-            periodicity: [1,2,3,4,5],
-            workoutSex: ['U', 'M', 'F'],
             alert: false,
-            troublesList: []
+            troublesList: [],
+            levelList: [],
+            dayList: [],
+            sexList: [],
         }
     },
    
@@ -243,14 +253,29 @@ export default {
                 {text: 'Создать', to: {name: 'workout-create'}}
             ];
         }
+        this.getSexes();
+        this.getDays();
+        this.getLevels();
         this.getTroubles();
+
         if (this.$route.params.id)
             this.getWorkout(this.$route.params.id).then((response) => {
                 response.data.troubles.forEach((trouble) => {
                     this.troublesList.push(trouble.id)
                 })
+                response.data.level.forEach((level) => {
+                    this.levelList.push(level.id)
+                })
+                response.data.periodicity.forEach((periodicity) => {
+                    this.dayList.push(periodicity.id)
+                })
+                response.data.sex.forEach((sex) => {
+                    this.sexList.push(sex.id)
+                })
+                
                 console.log(this.troublesList)
         });
+
     },
     methods: {
         goSave($event){
@@ -261,7 +286,26 @@ export default {
                 data.troubles = []
             else
                 data.troubles = JSON.stringify(this.troublesList)
-            console.log(`Data: ${data}`);
+
+            data.level = this.levelList;
+            if (data.level.length === 0)
+                data.level = []
+            else
+                data.level = JSON.stringify(this.levelList)
+
+            data.periodicity = this.dayList;
+            if (data.periodicity.length === 0)
+                data.periodicity = []
+            else
+                data.periodicity = JSON.stringify(this.dayList)
+
+            data.sex = this.sexList;
+            if (data.sex.length === 0)
+                data.sex = []
+            else
+                data.sex = JSON.stringify(this.sexList)
+
+            console.log(data);
             this.saveWorkout(data, this.$route.params.id);
             this.alert = true;
         },

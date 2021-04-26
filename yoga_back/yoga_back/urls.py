@@ -25,7 +25,7 @@ urlpatterns = [
     path('api/', include('rest_framework.urls')),
     path('api/workout/', include('workout.urls')),
     path('api/user/', include('user.urls')),
-    path('apidoc/', apidoc, name='apidoc')
+    path('silk/', include('silk.urls', namespace='silk')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

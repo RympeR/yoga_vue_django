@@ -2,14 +2,18 @@ from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.pagination import PageNumberPagination
-from .serializers import WorkoutSerializer, TroubleSerializer
+from .serializers import (
+    WorkoutSerializer, TroubleSerializer, WorkoutCreateSerializer,
+    LevelSerializer, SexSerializer, DaySerializer
+)
 from django.core.paginator import Paginator
 from rest_framework import permissions
 from rest_framework.decorators import api_view, permission_classes, renderer_classes
 import os
 from rest_framework.parsers import FileUploadParser, MultiPartParser
 from rest_framework.renderers import JSONRenderer, TemplateHTMLRenderer
-
+from rest_framework import parsers, permissions, generics
+from .models import *
 
 @permission_classes((permissions.AllowAny,))
 class TroubleAPI(APIView):
@@ -126,12 +130,12 @@ class WorkoutAPI(APIView):
                 "name": workout.name,
                 "video": video_url,
                 "duration": workout.duration,
-                "periodicity": workout.periodicity,
-                "level": workout.level,
+                "periodicity": workout.periodicity.values(),
+                "level": workout.level.values(),
                 "description": workout.description,
                 "value": workout.value,
                 "image": image_url,
-                "sex": workout.sex,
+                "sex": workout.sex.values(),
                 "troubles": workout.troubles.values()
             }
         )
@@ -276,11 +280,10 @@ class WorkoutInfoAPI(APIView):
 @permission_classes((permissions.AllowAny,))
 @renderer_classes((JSONRenderer,))
 class WorkoutFilteredList(APIView):
-    parser_classes = (MultiPartParser,)
+    parser_classes = (parsers.JSONParser, parsers.MultiPartParser, parsers.FormParser)
     def get(self, *args, **kwargs):
         workouts = WorkoutSerializer.getFilteredList(self.request.data)
-        print(workouts)
-        workouts_list = workouts.values('id', 'name', 'image')
+        workouts_list =  workouts.values('id', 'name', 'image')
         domain = self.request.get_host()
         for ind, workout in enumerate(workouts_list):
             path_image = workouts[ind].image.url
@@ -305,7 +308,7 @@ class WorkoutFilteredListAPI(APIView):
         workouts_list = workouts.values('id', 'name', 'image')
         domain = self.request.get_host()
         for ind, workout in enumerate(workouts_list):
-            path_image = workouts[ind].image.url
+            path_image = workout.image.url
             image_url = 'http://{domain}{path}'.format(
                 domain=domain, path=path_image)
             workouts_list[ind]['image'] = image_url
@@ -313,5 +316,38 @@ class WorkoutFilteredListAPI(APIView):
         return Response(
             workouts_list
         )
+
+
+
+
+class CreateWorkout(generics.ListCreateAPIView):
+    permission_classes = (permissions.AllowAny, )
+    queryset = Workout.objects.all()
+    parser_classes = (parsers.JSONParser, parsers.MultiPartParser, parsers.FormParser)
+    serializer_class = WorkoutCreateSerializer
+
+class UpdateWorkout(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = (permissions.AllowAny, )
+    queryset = Workout.objects.all()
+    parser_classes = (parsers.JSONParser, parsers.MultiPartParser, parsers.FormParser, parsers.FileUploadParser)
+    serializer_class = WorkoutCreateSerializer
+
+class DayAPI(generics.ListCreateAPIView):
+    permission_classes = (permissions.AllowAny, )
+    queryset = Day.objects.all()
+    parser_classes = (parsers.JSONParser, parsers.MultiPartParser, parsers.FormParser)
+    serializer_class = DaySerializer
+
+class SexAPI(generics.ListCreateAPIView):
+    permission_classes = (permissions.AllowAny, )
+    queryset = Sex.objects.all()
+    parser_classes = (parsers.JSONParser, parsers.MultiPartParser, parsers.FormParser)
+    serializer_class = SexSerializer
+
+class LevelAPI(generics.ListCreateAPIView):
+    permission_classes = (permissions.AllowAny, )
+    queryset = Level.objects.all()
+    parser_classes = (parsers.JSONParser, parsers.MultiPartParser, parsers.FormParser)
+    serializer_class = LevelSerializer
 
 

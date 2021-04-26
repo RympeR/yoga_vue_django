@@ -150,11 +150,6 @@
             }
         ]
     }
-    @apiErrorExample {json} Error-Response:
-    HTTP/1.1 200 without token
-    {
-        "status": "invalid token"
-    }
 """
 
 """
@@ -208,10 +203,5 @@
                 "image": "http://api-yoga.maximusapp.com/ghrweherherh_dtDHOan.jpg"
             }
         ]
-    }
-    @apiErrorExample {json} Error-Response:
-    HTTP/1.1 200 without token
-    {
-        "status": "invalid token"
     }
 """

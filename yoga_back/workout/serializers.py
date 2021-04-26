@@ -1,7 +1,8 @@
+from django.db.models.query_utils import select_related_descend
 from rest_framework import serializers
-from .models import Workout, Trouble
+from .models import Sex, Workout, Trouble, Day, Level
 from django.shortcuts import get_object_or_404
-from django.db.models import Q
+from django.db.models import Q, fields
 import psycopg2
 import ast
 
@@ -76,11 +77,12 @@ class WorkoutSerializer(serializers.ModelSerializer):
         print(ast.literal_eval(validated_data['troubles']))
         troubles_id = []
         for trouble_id in ast.literal_eval(validated_data['troubles']):
-            try: 
+            try:
                 troubles_id.append(int(trouble_id))
             except TypeError:
                 continue
-        troubles = [Trouble.objects.get(pk=trouble_id) for trouble_id in troubles_id]
+        troubles = [Trouble.objects.get(pk=trouble_id)
+                    for trouble_id in troubles_id]
         workout = Workout.objects.create(
             name=validated_data['name'][0],
             video=validated_data['video'],
@@ -103,7 +105,7 @@ class WorkoutSerializer(serializers.ModelSerializer):
         print(ast.literal_eval(validated_data['troubles'][0]))
         troubles_id = []
         for trouble_id in ast.literal_eval(validated_data['troubles'][0]):
-            try: 
+            try:
                 troubles_id.append(int(trouble_id))
             except TypeError:
                 continue
@@ -153,17 +155,39 @@ class WorkoutSerializer(serializers.ModelSerializer):
         if filters:
             filters = dict(filters)
             print(filters)
-            if filters['sex'][0] != 'U':
-                filters['sex'][0] = [filters['sex'][0], 'U']
-            else:
-                filters['sex'][0] = list(filters['sex'][0])
             workouts = Workout.objects.filter(
-                Q(sex__in=filters['sex'][0]) &
-                Q(periodicity__lte=filters['periodicity'][0]) &
-                Q(level=filters['level'][0]) &
-                Q(troubles__pk__in=ast.literal_eval(filters['troubles'][0]))
+                Q(sex__pk__in=filters['sex']) &
+                Q(periodicity__pk__in=filters['periodicity']) &
+                Q(level__pk__in=filters['level']) &
+                Q(troubles__pk__in=filters['troubles'])
+            ).distinct()
 
-            )
             return workouts
         else:
             return WorkoutSerializer.getList()
+
+
+class DaySerializer(serializers.ModelSerializer):
+    class Meta:
+        fields = '__all__'
+        model = Day
+
+class SexSerializer(serializers.ModelSerializer):
+    class Meta:
+        fields = '__all__'
+        model = Sex
+
+
+class LevelSerializer(serializers.ModelSerializer):
+    class Meta:
+        fields = '__all__'
+        model = Level
+
+
+class WorkoutCreateSerializer(serializers.ModelSerializer):
+    image = serializers.ImageField(required=False)
+    video = serializers.FileField(required=False)
+    
+    class Meta:
+        fields = '__all__'
+        model = Workout

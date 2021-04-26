@@ -5,7 +5,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import User
 from .serializers import UserSerializer, AdminSerializer
-from rest_framework import permissions
+from rest_framework import permissions, parsers
 from rest_framework.parsers import FileUploadParser, MultiPartParser
 from rest_framework.renderers import JSONRenderer, TemplateHTMLRenderer
 from rest_framework.decorators import api_view, permission_classes, renderer_classes
@@ -89,21 +89,15 @@ class UserListAPI(APIView):
 
 @permission_classes((permissions.AllowAny,))
 class AdminAPI(APIView):
-    parser_classes=(MultiPartParser,)
+    parser_classes = (parsers.JSONParser, parsers.MultiPartParser, parsers.FormParser)
     def post(self, *args, **kwargs):
         admin = AdminSerializer.get(self.request.data)
         if admin:
             return Response(
                 {
-<<<<<<< HEAD
-                    "success": True,
-                    "admin": admin.email,
-                    "auth_token": "AWSEGKWPOGKJgfewgwewegweg"
-=======
                     'success': True,
                     'admin': admin.email,
                     'auth_token': 'tset'
->>>>>>> d23c3407b89679c29a8a44b2d470490263ae3583
                 }
             )
         else:
