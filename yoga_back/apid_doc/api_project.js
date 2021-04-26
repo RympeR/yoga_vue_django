@@ -1,12 +1,13 @@
 define({
-  "name": "Yoga-apidoc",
-  "version": "0.3.0",
-  "description": "apiDoc yoga project",
-  "title": "API for Yog app",
-  "url": "http://185.233.118.44",
+  "name": "yoga-api",
+  "version": "0.1.0",
+  "description": "Apidoc for yoga project",
+  "title": "Yoga API",
+  "url": "http://api-yoga.maximusapp.com",
   "order": [
-    "GetUser",
-    "PostUser"
+    "User",
+    "Workout",
+    "Trouble"
   ],
   "template": {
     "withCompare": true,
@@ -17,8 +18,8 @@ define({
   "apidoc": "0.3.0",
   "generator": {
     "name": "apidoc",
-    "time": "2021-02-25T14:26:43.447Z",
+    "time": "2021-04-13T09:28:08.912Z",
     "url": "https://apidocjs.com",
-    "version": "0.26.0"
+    "version": "0.27.1"
   }
 });

@@ -97,7 +97,7 @@ class AdminAPI(APIView):
                 {
                     'success': True,
                     'admin': admin.email,
-                    'auth_token': 'AWSEGKWPOGKJgfewgwewegweg'
+                    'auth_token': 'tset'
                 }
             )
         else:
